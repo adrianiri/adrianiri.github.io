@@ -14,6 +14,7 @@ async function generarURL() {
         /*Se cambia de nombre de carpeta a menudo para que DriveToCloud actualice su caché*/
         /* url = "https://trivialproficiencyadrian.on.drv.tw/Proficiency/2022/" + getParentFolder() + "/data/traduccionesJSON.json"; */
         url = "data/traduccionesJSON.json";
+        console.log (url);
         leerJSON();
     } finally {
         if (esServidorLocal) {
