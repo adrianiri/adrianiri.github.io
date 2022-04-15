@@ -1,2 +1,0 @@
-Chanchito triste
-Chanchito feliz
