@@ -12,7 +12,8 @@ async function generarURL() {
     } catch (err) {
         esServidorLocal = false;
         /*Se cambia de nombre de carpeta a menudo para que DriveToCloud actualice su caché*/
-        url = "https://trivialproficiencyadrian.on.drv.tw/Proficiency/2022/" + getParentFolder() + "/data/traduccionesJSON.json";
+        /* url = "https://trivialproficiencyadrian.on.drv.tw/Proficiency/2022/" + getParentFolder() + "/data/traduccionesJSON.json"; */
+        url = "data/traduccionesJSON.json";
         leerJSON();
     } finally {
         if (esServidorLocal) {
