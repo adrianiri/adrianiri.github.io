@@ -11,7 +11,7 @@ async function generarURL() {
         }
     } catch (err) {
         esServidorLocal = false;
-        /*Se cambia de nombre de carpeta a menudo para que DriveToCloud actualice su caché*/
+        /* One to drive: lento, problemas con la caché (no actualizaba el json) y sin gestor de cambios */
         /* url = "https://trivialproficiencyadrian.on.drv.tw/Proficiency/2022/" + getParentFolder() + "/data/traduccionesJSON.json"; */
         url = "data/traduccionesJSON.json";
         console.log (url);
