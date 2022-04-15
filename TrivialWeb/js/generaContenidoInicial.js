@@ -1,14 +1,7 @@
+// VARIABLES
 let datos = [];
 var totalTraducciones = 0;
-function actualizaBarra(i){
-    var progreso = document.getElementById('progreso');
-    var barraProgreso = progreso.getElementsByClassName('progress-bar')[0];
-    console.log(`${i},${totalTraducciones}`)
-    barraProgreso.style.width = `${100*i/totalTraducciones}%`;
-    barraProgreso.style.backgroundColor = `rgb(${barraCargaRojo(i/totalTraducciones)},
-                                                ${barraCargaVerde(i/totalTraducciones)},
-                                                ${barraCargaAzul(i/totalTraducciones)})`;
-} 
+// ELEMENTOS CONTENIDO INICIAL
 function generacionTitulo(titulo) {
     var body = document.querySelector("body");
     body.innerHTML += `
@@ -75,26 +68,28 @@ function generaTabla() {
             arrTraduccionesJSON[i].Sinónimos,
             arrTraduccionesJSON[i].Antónimos
         );
-        actualizaBarra(i);
+        actualizaBarraProgreso(i,totalTraducciones);
         if (i == totalTraducciones - 1) {
             containerBarra.classList.add("oculto");
             header.classList.remove("oculto");
             tabla.classList.remove("oculto");
-            crono.clearInterval;
+            clearInterval(crono);
         }
         i++;
     }, 0) //Esta jugada sustituye a un for() para poder actualizar la UI y mostrar la barra de progreso
 }
-function leerJSON() {
+// AJAX
+function leerJSON(url) {
     var ajax = new XMLHttpRequest();
     cargando = true;
     ajax.onload = generaTabla;
     ajax.open("GET", url);
     ajax.send();
 }
-function generaContenidoInicial() {
+// LLAMADAS
+function generaContenidoInicial(url) {
     generacionTitulo("TRIVIAL");
     generacionCabecera();
     generacionBarraProgreso("LOADING...");
-    leerJSON();
+    leerJSON(url);
 }
