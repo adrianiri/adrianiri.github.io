@@ -1,2 +1,2 @@
 start startPHP.bat
-start ..\inicio.html
+start ..\index.html
