@@ -1,0 +1,64 @@
+:root {
+    --fondo-claro: rgb(255,255,255);
+    --fondo-medio: rgb(200,200,200);
+    --fondo-medio-oscuro: rgb(150,150,150);
+    --fondo-oscuro: rgb(100,100,100);
+    --letra: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --letra-clara:rgb(255,255,255);
+    --letra-oscura:rgb(0,0,0);
+    --borde-fino:1px solid rgb(0,0,0);
+    --borde-grueso:2px solid rgb(0,0,0);
+    --opacidad-total:1;
+    --opacidad-media:0.90;
+    --borde-letra-blanco: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 0.5px 0.5px #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff;
+    --ancho-barraProgreso: 50vw;
+    --top-barraProgreso: 45vh;
+    --height-barraProgreso: 18px;
+    --transicion: 0s;
+}
+* {
+    font-family: var(--letra);
+    font-weight: normal;
+    color: var(--letra-oscura);
+}
+body {
+	margin: 0;
+    font-size: 12px;
+	background-image: url(../img/banderaUK.jpg);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: var(--opacidad-media);
+    position: relative;
+}
+div, td, th {
+    overflow: auto;
+}
+th, td {
+    border: var(--borde-fino);
+    border-collapse: collapse;
+}
+h2 {
+    font-weight: bold;
+    padding-top: 5px;
+    margin: 0;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+#div_title {
+    color: var(--letra-clara);
+    text-align: center;
+    text-shadow: var(--borde-letra-blanco);
+    height:30px;
+    background-color: var(--fondo-oscuro);
+    border: var(--borde-fino);
+}
+.letra-verde {
+    color: green;
+}
+.letra-azul {
+    color: blue;
+}
+.oculto {
+	display: none !important;
+}

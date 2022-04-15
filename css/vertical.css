@@ -1,0 +1,84 @@
+@media (orientation: portrait) {
+    table {
+        display: table;
+        border-collapse: collapse;
+        box-sizing: border-box;
+        text-indent: initial;
+        border-spacing: 0px;
+    }
+    #div_table {
+        position: fixed; max-height:calc(100vh - 30px); top: 30px;
+        scroll-snap-type: y mandatory;
+        left: 0px;
+        padding: 0px;
+        margin: 0px;
+    }
+    #div_table tr {
+        display: flex;
+        flex-direction: column;
+        scroll-snap-align: start;
+        left: 0px;
+        padding-top: 5px;
+        margin: 0px;
+    }
+    #div_table td {
+        align-self: flex-start;
+        background-color: var(--fondo-claro);
+        left: 0px;
+        padding: 5px;
+        margin: 0px;
+        width: 100vw;
+    }
+    /* Una de las dos primeras columnas tiene que tener información */
+    #div_table td:first-child:not(:empty),
+    #div_table td:first-child:empty+td:not(:empty) {
+        background-color: var(--fondo-medio);
+    }
+    #div_table td:empty {
+        visibility: hidden;
+        padding: 0px;
+        margin: 0px;
+        border:none;
+    }
+    #div_header {
+        visibility: hidden;
+        padding: 0px;
+        margin: 0px;
+    }
+    .word:not(:empty)::before {
+        font-weight: bold;
+        content: "WORD: ";
+    }
+    .expression:not(:empty)::before {
+        font-weight: bold;
+        content: "EXPRESSION: ";
+    }
+    .meaning:not(:empty)::before {
+        font-weight: bold;
+        content: "MEANING: ";
+    }
+    .synonyms:not(:empty)::before {
+        font-weight: bold;
+        content: "SYNONYMS: ";
+    }
+    .antonyms:not(:empty)::before {
+        font-weight: bold;
+        content: "ANTONYMS: ";
+    }
+    .palabra:not(:empty)::before {
+        font-weight: bold;
+        content: "PALABRA: ";
+    }
+    .expresion:not(:empty)::before {
+        font-weight: bold;
+        content: "EXPRESIÓN: ";
+    }
+    .sinonimos:not(:empty)::before {
+        font-weight: bold;
+        content: "SINÓNIMOS: ";
+    }
+    .antonimos:not(:empty)::before {
+        font-weight: bold;
+        content: "ANTÓNIMOS: ";
+    }
+}

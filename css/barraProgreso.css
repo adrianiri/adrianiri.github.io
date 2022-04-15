@@ -1,0 +1,25 @@
+.container {
+  color: #404040;
+  background: #2a2a2a;
+  margin: auto;
+  width: var(--ancho-barraProgreso);
+  text-align: center;
+  position: relative;
+  top: var(--top-barraProgreso);
+}
+.progress {
+  padding: 4px;
+  border-radius: 6px;
+}
+.progress-bar {  /* Se han eliminado las variantes webkit moz y o, habrá que ver si sigue funcionando en estos navegadores */
+  height: var(--height-barraProgreso);
+  border-radius: 4px;
+  transition: var(--transicion) linear;
+  transition-property: width, background-color;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+.progress-bar > p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
