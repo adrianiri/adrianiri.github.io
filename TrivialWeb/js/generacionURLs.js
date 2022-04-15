@@ -7,7 +7,7 @@ async function generarURL() {
         if (text == "1") {
             esServidorLocal = true;
             url = "http://127.0.0.1:8000/leerTraducciones.php";
-            leerJSON();
+            generaContenidoInicial();
         }
     } catch (err) {
         esServidorLocal = false;
@@ -15,7 +15,7 @@ async function generarURL() {
         /* url = "https://trivialproficiencyadrian.on.drv.tw/Proficiency/2022/" + getParentFolder() + "/data/traduccionesJSON.json"; */
         url = "data/traduccionesJSON.json";
         console.log (url);
-        leerJSON();
+        generaContenidoInicial();
     } finally {
         if (esServidorLocal) {
             console.log("SERVIDOR LOCAL");

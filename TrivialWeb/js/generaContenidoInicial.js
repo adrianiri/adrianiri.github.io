@@ -9,12 +9,17 @@ function actualizaBarra(i){
                                                 ${barraCargaVerde(i/totalTraducciones)},
                                                 ${barraCargaAzul(i/totalTraducciones)})`;
 } 
-function generaTabla() {
+function generacionTitulo(titulo) {
     var body = document.querySelector("body");
     body.innerHTML += `
         <div id="div_title">
-            <h2>TRIVIAL</h2>
+            <h2>${titulo}</h2>
         </div>
+    `;
+}
+function generacionCabecera() {
+    var body = document.querySelector("body");
+    body.innerHTML += `
         <div id="div_header">
             <table  id="header" style="table-layout:fixed">
                 <tr>
@@ -30,11 +35,21 @@ function generaTabla() {
                 </tr>
             </table>
         </div>
-        <div class="container">
-            <div class="progress" id="progreso">
-                <div class="progress-bar"><p>LOADING...</p></div>
-            </div>
+    `;
+}
+function generacionBarraProgreso(textoCarga) {
+    var body = document.querySelector("body");
+    body.innerHTML += `
+    <div class="container">
+        <div class="progress" id="progreso">
+            <div class="progress-bar"><p>${textoCarga}</p></div>
         </div>
+    </div>
+    `
+}
+function generaTabla() {
+    var body = document.querySelector("body");
+    body.innerHTML += `
         <div id="div_table">
             <table id="table"></table>
         </div>
@@ -76,4 +91,10 @@ function leerJSON() {
     ajax.onload = generaTabla;
     ajax.open("GET", url);
     ajax.send();
+}
+function generaContenidoInicial() {
+    generacionTitulo("TRIVIAL");
+    generacionCabecera();
+    generacionBarraProgreso("LOADING...");
+    leerJSON();
 }
