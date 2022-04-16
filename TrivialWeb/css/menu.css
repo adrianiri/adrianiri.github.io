@@ -4,10 +4,10 @@
     --escalado-icono-grande: 1.5;
     --escalado-icono-pequeño: 0.8;
     --translateY: calc(-100vh + var(--height-menu));
-    --fondo-uno: blue;
+    --fondo-uno: transparent;
     --fondo-dos: green;
-    --fondo-tres: brown;
-    --fondo-cuatro: purple;
+    --fondo-tres: blue;
+    --fondo-cuatro: brown;
 }
 body {
     margin: 0;
@@ -31,7 +31,7 @@ body {
 #p2, #p3, #p4 {
     top: 100vh;
 }
-#p1 { background: var(--fondo-uno); }
+#p1 { background: transparent; }
 #p2 { background: var(--fondo-dos); }
 #p3 { background: var(--fondo-tres); }
 #p4 { background: var(--fondo-cuatro); }
@@ -75,7 +75,7 @@ ul .icon:hover {
     text-shadow: var(--borde-letra-blanco);
 }
 #t1:target #uno {
-    color: var(--fondo-uno);
+    color: black;
 }
 #t2:target #dos {
     color: var(--fondo-dos);

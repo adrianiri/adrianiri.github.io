@@ -33,8 +33,8 @@ function generacionBarraProgreso(textoCarga) {
     `
 }
 function generaTabla() {
-    var body = document.querySelector("body");
-    body.innerHTML += `
+    var p1 = document.querySelector("#p1");
+    p1.innerHTML += `
         <div id="div_table">
             <table id="table"></table>
         </div>
@@ -63,8 +63,10 @@ function generaTabla() {
         actualizaBarraProgreso(i,totalTraducciones);
         if (i == totalTraducciones - 1) {
             containerBarra.classList.add("oculto");
-            //header.classList.remove("oculto");
-            //tabla.classList.remove("oculto");
+            header.classList.remove("oculto");
+            tabla.classList.remove("oculto");
+            var p1 = document.querySelector("#uno");
+            p1.click();
             clearInterval(crono);
         }
         i++;
