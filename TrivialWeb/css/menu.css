@@ -69,6 +69,8 @@ ul .icon:hover {
     -webkit-transform: scale(var(--escalado-icono-grande)) !important;
     -moz-transform: scale(var(--escalado-icono-grande)) !important;
     -o-transform: scale(var(--escalado-icono-grande)) !important;
+    color: var(--letra-oscura);
+    text-shadow: var(--borde-letra-blanco);
 }
 ul {
     position: fixed;
