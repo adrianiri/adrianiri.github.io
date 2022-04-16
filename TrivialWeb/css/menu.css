@@ -21,7 +21,7 @@ body {
     transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
     -webkit-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
     -moz-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
-    -o-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);  
+    -o-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
     overflow: hidden; 
     position: absolute;
     z-index: -1;
