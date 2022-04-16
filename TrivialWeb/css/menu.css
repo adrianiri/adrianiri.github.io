@@ -45,11 +45,11 @@ body {
     transition-delay: .2s !important;
 }
 .icon {
-    color: white;
+    color: var(--letra-media);
     font-size: var(--font-size-icon);
 }
 ul .icon:hover {
-    opacity: 0.5;
+    text-shadow: var(--borde-letra-blanco);
 }
 #t2:target ul .icon,
 #t3:target ul .icon,
