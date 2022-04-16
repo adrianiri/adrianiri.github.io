@@ -3,7 +3,7 @@
     --font-size-icon: 20px;
     --escalado-icono-grande: 1.5;
     --escalado-icono-pequeño: 0.8;
-    --translateY: calc(-200% + var(--height-menu));
+    --translateY: calc(-100vh + var(--height-menu));
     --fondo-uno: blue;
     --fondo-dos: green;
     --fondo-tres: brown;
@@ -14,7 +14,7 @@ body {
 }
 .page {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - var(--height-menu));
     margin: 0;
     padding: 0;
     transition: all .4s cubic-bezier(0.54, 0.35, 0.29, 0.99);
@@ -29,7 +29,7 @@ body {
     top: var(--height-menu);
 }
 #p2, #p3, #p4 {
-    top: 200%;
+    top: 100vh;
 }
 #p1 { background: var(--fondo-uno); }
 #p2 { background: var(--fondo-dos); }

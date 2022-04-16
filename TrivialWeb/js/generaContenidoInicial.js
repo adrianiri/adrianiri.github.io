@@ -63,8 +63,8 @@ function generaTabla() {
         actualizaBarraProgreso(i,totalTraducciones);
         if (i == totalTraducciones - 1) {
             containerBarra.classList.add("oculto");
-            header.classList.remove("oculto");
-            tabla.classList.remove("oculto");
+            //header.classList.remove("oculto");
+            //tabla.classList.remove("oculto");
             clearInterval(crono);
         }
         i++;
