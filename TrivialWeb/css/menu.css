@@ -98,10 +98,12 @@ li a {
     text-decoration: none;
 }
 #menu .icon {
-    margin-top: calc((var(--height-menu) - var(--font-size-icon)) / 2);
-    margin-bottom: calc((var(--height-menu) - var(--font-size-icon)) / 2);
-    margin-left: calc(var(--height-menu) - var(--font-size-icon));
-    margin-right: calc(var(--height-menu) - var(--font-size-icon));
+    padding-top: calc((var(--height-menu) - var(--font-size-icon)) / 2);
+    padding-bottom: calc((var(--height-menu) - var(--font-size-icon)) / 2);
+    padding-left: calc((var(--height-menu) - var(--font-size-icon)) / 2);;
+    padding-right: calc((var(--height-menu) - var(--font-size-icon)) / 2);;
+    margin-left: calc((var(--height-menu) - var(--font-size-icon)) / 2);
+    margin-right: calc((var(--height-menu) - var(--font-size-icon)) / 2);
     transition: all .5s ease-out !important;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
