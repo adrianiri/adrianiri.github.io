@@ -4,6 +4,10 @@
     --escalado-icono-grande: 1.5;
     --escalado-icono-pequeño: 0.8;
     --translateY: calc(-200% + var(--height-menu));
+    --fondo-uno: blue;
+    --fondo-dos: green;
+    --fondo-tres: brown;
+    --fondo-cuatro: purple;
 }
 body {
     margin: 0;
@@ -27,10 +31,10 @@ body {
 #p2, #p3, #p4 {
     top: 200%;
 }
-#p1 { background: darkslateblue; }
-#p2 { background: tomato; }
-#p3 { background: gold; }
-#p4 { background: deeppink; }
+#p1 { background: var(--fondo-uno); }
+#p2 { background: var(--fondo-dos); }
+#p3 { background: var(--fondo-tres); }
+#p4 { background: var(--fondo-cuatro); }
 #t2:target #p2,
 #t3:target #p3,
 #t4:target #p4 {
@@ -68,8 +72,19 @@ ul .icon:hover {
     -webkit-transform: scale(var(--escalado-icono-grande)) !important;
     -moz-transform: scale(var(--escalado-icono-grande)) !important;
     -o-transform: scale(var(--escalado-icono-grande)) !important;
-    color: var(--letra-oscura);
     text-shadow: var(--borde-letra-blanco);
+}
+#t1:target #uno {
+    color: var(--fondo-uno);
+}
+#t2:target #dos {
+    color: var(--fondo-dos);
+}
+#t3:target #tres {
+    color: var(--fondo-tres);
+}
+#t4:target #cuatro {
+    color: var(--fondo-cuatro);
 }
 #tres,
 #cuatro {
