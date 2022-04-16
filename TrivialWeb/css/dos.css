@@ -1,0 +1,42 @@
+:root {
+    --p2-margin: 10px;
+    --p2-padding: 10px;
+    --p2-form-width: 500px;
+    --p2-form-height: 500px;
+    --p2-form-header-height: var(--height-cabecera);
+}
+#p2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#p2 > form {
+    background-color: var(--fondo-medio);
+    width: var(--p2-form-width);
+    height: var(--p2-form-height);
+    margin: var(--p2-margin);
+    padding: var(--p2-padding);
+    text-align: center;
+    border: var(--borde-fino);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.4);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#p2 > form > header {
+	width: calc(var(--p2-form-width) - var(--p2-margin));
+    height: var(--p2-form-header-height);
+    background-color: var(--fondo-medio-oscuro);
+	margin: var(--p2-margin);
+    padding-top: 10px;
+    font-weight: bold;
+}
+#p2 > form > section {
+	width: 300px;
+    background-color: var(--fondo-claro);
+	margin: var(--p2-margin);
+    padding: var(--p2-padding);
+}
+#p2 > form > section > .checkbox {
+    text-align: left;
+}

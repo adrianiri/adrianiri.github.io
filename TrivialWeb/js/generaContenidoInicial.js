@@ -3,8 +3,8 @@ let datos = [];
 var totalTraducciones = 0;
 // ELEMENTOS CONTENIDO INICIAL
 function generacionCabecera() {
-    var body = document.querySelector("body");
-    body.innerHTML += `
+    var p1 = document.querySelector("#p1");
+    p1.innerHTML += `
         <div id="div_header">
             <table  id="header" style="table-layout:fixed">
                 <tr>
