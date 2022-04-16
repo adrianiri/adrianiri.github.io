@@ -64,7 +64,7 @@ h2 {
     color: blue;
 }
 .oculto {
-	display: none !important;
+	visibility: hidden !important;
 }
 button{
     line-height: 20px;

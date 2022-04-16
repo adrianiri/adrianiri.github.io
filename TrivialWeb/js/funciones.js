@@ -31,7 +31,7 @@ function visibilidadDos() {
     p3.classList.remove("oculto");
     p4.classList.remove("oculto");
     var crono = setTimeout(function() {
-        p1.classList.add("oculto");
+        p1.classList.remove("oculto");
         p2.classList.remove("oculto");
         p3.classList.add("oculto");
         p4.classList.add("oculto");
@@ -47,7 +47,7 @@ function visibilidadDos() {
     p3.classList.remove("oculto");
     p4.classList.remove("oculto");
     var crono = setTimeout(function() {
-        p1.classList.add("oculto");
+        p1.classList.remove("oculto");
         p2.classList.add("oculto");
         p3.classList.remove("oculto");
         p4.classList.add("oculto");
@@ -63,7 +63,7 @@ function visibilidadDos() {
     p3.classList.remove("oculto");
     p4.classList.remove("oculto");
     var crono = setTimeout(function() {
-        p1.classList.add("oculto");
+        p1.classList.remove("oculto");
         p2.classList.add("oculto");
         p3.classList.add("oculto");
         p4.classList.remove("oculto");
