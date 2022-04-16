@@ -19,7 +19,7 @@ function visibilidadUno() {
         p2.classList.add("oculto");
         p3.classList.add("oculto");
         p4.classList.add("oculto");
-    }, 1000);
+    }, 500);
 }
 function visibilidadDos() {
     var p1 = document.querySelector("#p1");
@@ -35,7 +35,7 @@ function visibilidadDos() {
         p2.classList.remove("oculto");
         p3.classList.add("oculto");
         p4.classList.add("oculto");
-    }, 1000);
+    }, 500);
   }
   function visibilidadTres() {
     var p1 = document.querySelector("#p1");
@@ -51,7 +51,7 @@ function visibilidadDos() {
         p2.classList.add("oculto");
         p3.classList.remove("oculto");
         p4.classList.add("oculto");
-    }, 1000);
+    }, 500);
   }
   function visibilidadCuatro() {
     var p1 = document.querySelector("#p1");
@@ -67,5 +67,5 @@ function visibilidadDos() {
         p2.classList.add("oculto");
         p3.classList.add("oculto");
         p4.classList.remove("oculto");
-    }, 1000);
+    }, 500);
   }
