@@ -2,14 +2,6 @@
 let datos = [];
 var totalTraducciones = 0;
 // ELEMENTOS CONTENIDO INICIAL
-function generacionTitulo(titulo) {
-    var body = document.querySelector("body");
-    body.innerHTML += `
-        <div id="div_title">
-            <h2>${titulo}</h2>
-        </div>
-    `;
-}
 function generacionCabecera() {
     var body = document.querySelector("body");
     body.innerHTML += `
@@ -88,7 +80,6 @@ function leerJSON(url) {
 }
 // LLAMADAS
 function generaContenidoInicial(url) {
-    generacionTitulo("TRIVIAL");
     generacionCabecera();
     generacionBarraProgreso("LOADING...");
     leerJSON(url);

@@ -46,14 +46,15 @@ h2 {
     margin-block-start: 0;
     margin-block-end: 0;
     padding-top: 14px;
+    color: var(--letra-oscura);
+    text-shadow: var(--borde-letra-blanco);
+    text-align: center;
 }
 #div_title {
-    color: var(--letra-clara);
-    text-align: center;
-    text-shadow: var(--borde-letra-blanco);
     height: var(--height-titulo);
     background-color: var(--fondo-oscuro);
     border: var(--borde-fino);
+    z-index: -1;
 }
 .letra-verde {
     color: green;
