@@ -53,18 +53,17 @@ ul .icon:hover {
 }
 #t2:target ul .icon,
 #t3:target ul .icon,
-#t4:target ul .icon,
-#t5:target ul .icon{
+#t4:target ul .icon {
     transform: scale(1);
     -webkit-transform: scale(var(--escalado-icono-pequeño));
     -moz-transform: scale(var(--escalado-icono-pequeño));
     -o-transform: scale(var(--escalado-icono-pequeño));
     transition-delay: .25s;
 }
+#t1:target #uno,
 #t2:target #dos,
 #t3:target #tres,
-#t4:target #cuatro,
-#t5:target #cinco {
+#t4:target #cuatro {
     transform: scale(var(--escalado-icono-grande)) !important;
     -webkit-transform: scale(var(--escalado-icono-grande)) !important;
     -moz-transform: scale(var(--escalado-icono-grande)) !important;
