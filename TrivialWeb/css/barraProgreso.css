@@ -1,3 +1,8 @@
+:root {
+  --ancho-barraProgreso: 50vw;
+  --height-barraProgreso: 18px;
+  --top-barraProgreso: calc(50vh - var(--height-barraProgreso) / 2);
+}
 .container {
   color: #404040;
   background: #2a2a2a;

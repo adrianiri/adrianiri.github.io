@@ -14,9 +14,6 @@
     --borde-letra-blanco: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 0.5px 0.5px #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff;
     --height-titulo: 50px;
     --height-cabecera: 30px;
-    --ancho-barraProgreso: 50vw;
-    --top-barraProgreso: 45vh;
-    --height-barraProgreso: 18px;
     --transicion: 0s;
 }
 * {

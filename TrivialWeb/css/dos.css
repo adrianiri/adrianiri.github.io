@@ -1,8 +1,8 @@
 :root {
     --p2-margin: 10px;
     --p2-padding: 10px;
-    --p2-form-width: 500px;
-    --p2-form-height: 500px;
+    --p2-form-width: 400px;
+    --p2-form-height: 300px;
     --p2-form-header-height: var(--height-cabecera);
 }
 #p2 {
@@ -14,7 +14,7 @@
 #p2 > form {
     background-color: var(--fondo-medio);
     width: var(--p2-form-width);
-    height: var(--p2-form-height);
+    height: auto;
     margin: var(--p2-margin);
     padding: var(--p2-padding);
     text-align: center;
@@ -33,8 +33,7 @@
     font-weight: bold;
 }
 #p2 > form > section {
-	width: 300px;
-    background-color: var(--fondo-claro);
+	width: calc(var(--p2-form-width) - var(--p2-margin));
 	margin: var(--p2-margin);
     padding: var(--p2-padding);
 }

@@ -83,6 +83,6 @@ function leerJSON(url) {
 // LLAMADAS
 function generaContenidoInicial(url) {
     generacionCabecera();
-    generacionBarraProgreso("LOADING...");
+    generacionBarraProgreso("CARGANDO TABLA...");
     leerJSON(url);
 }
