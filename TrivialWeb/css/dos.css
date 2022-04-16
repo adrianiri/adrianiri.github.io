@@ -1,7 +1,7 @@
 :root {
     --p2-margin: 10px;
     --p2-padding: 10px;
-    --p2-form-width: 400px;
+    --p2-form-width: 300px;
     --p2-form-height: 300px;
     --p2-form-header-height: var(--height-cabecera);
 }
