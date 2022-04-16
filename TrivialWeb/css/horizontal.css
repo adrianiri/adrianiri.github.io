@@ -1,12 +1,12 @@
 @media (orientation: landscape) {
     #div_header {
         position: fixed;
-        top: 30px;
+        top: var(--height-titulo);
     }
     #header {
         text-shadow: var(--borde-letra-blanco);
         width: 100vw;
-        height: 30px;
+        height: var(--height-cabecera);
     }
     th {
         background-color: var(--fondo-medio-oscuro);
@@ -16,7 +16,7 @@
         padding: 5px;
     }
     #div_table {
-        position: fixed; max-height:calc(100vh - 60px); top: 60px;
+        position: fixed; max-height:calc(100vh - var(--height-titulo) - var(--height-cabecera)); top: calc(var(--height-titulo) + var(--height-cabecera));
         scroll-snap-type: y mandatory;
         width: 100vw;
     }

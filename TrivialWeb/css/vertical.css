@@ -4,29 +4,29 @@
         border-collapse: collapse;
         box-sizing: border-box;
         text-indent: initial;
-        border-spacing: 0px;
+        border-spacing: 0;
     }
     #div_table {
-        position: fixed; max-height:calc(100vh - 30px); top: 30px;
+        position: fixed; max-height:calc(100vh - var(--height-titulo)); top: var(--height-titulo);
         scroll-snap-type: y mandatory;
-        left: 0px;
-        padding: 0px;
-        margin: 0px;
+        left: 0;
+        padding: 0;
+        margin: 0;
     }
     #div_table tr {
         display: flex;
         flex-direction: column;
         scroll-snap-align: start;
-        left: 0px;
+        left: 0;
         padding-top: 5px;
-        margin: 0px;
+        margin: 0;
     }
     #div_table td {
         align-self: flex-start;
         background-color: var(--fondo-claro);
-        left: 0px;
+        left: 0;
         padding: 5px;
-        margin: 0px;
+        margin: 0;
         width: 100vw;
     }
     /* Una de las dos primeras columnas tiene que tener información */
@@ -36,14 +36,14 @@
     }
     #div_table td:empty {
         visibility: hidden;
-        padding: 0px;
-        margin: 0px;
+        padding: 0;
+        margin: 0;
         border:none;
     }
     #div_header {
         visibility: hidden;
-        padding: 0px;
-        margin: 0px;
+        padding: 0;
+        margin: 0;
     }
     .word:not(:empty)::before {
         font-weight: bold;

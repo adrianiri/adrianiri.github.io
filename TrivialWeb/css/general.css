@@ -11,6 +11,8 @@
     --opacidad-total:1;
     --opacidad-media:0.90;
     --borde-letra-blanco: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 0.5px 0.5px #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff;
+    --height-titulo: 50px;
+    --height-cabecera: 30px;
     --ancho-barraProgreso: 50vw;
     --top-barraProgreso: 45vh;
     --height-barraProgreso: 18px;
@@ -40,16 +42,16 @@ th, td {
 }
 h2 {
     font-weight: bold;
-    padding-top: 5px;
     margin: 0;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-top: 10px;
 }
 #div_title {
     color: var(--letra-clara);
     text-align: center;
     text-shadow: var(--borde-letra-blanco);
-    height: 30px;
+    height: var(--height-titulo);
     background-color: var(--fondo-oscuro);
     border: var(--borde-fino);
 }
