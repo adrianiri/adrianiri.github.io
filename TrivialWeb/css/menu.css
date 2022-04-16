@@ -1,7 +1,7 @@
 :root {
     --height-menu: 50px;
     --font-size-icon: 20px;
-    --escalado-icono-grande: 1.3;
+    --escalado-icono-grande: 1.5;
     --escalado-icono-pequeño: 0.8;
     --translateY: calc(-200% + var(--height-menu));
 }
@@ -71,6 +71,9 @@ ul .icon:hover {
     color: var(--letra-oscura);
     text-shadow: var(--borde-letra-blanco);
 }
+#cuatro {
+    float: right;
+}
 ul {
     position: fixed;
     top: 0;
@@ -94,10 +97,7 @@ li a {
     text-decoration: none;
 }
 #menu .icon {
-    padding-top: calc((var(--height-menu) - var(--font-size-icon)) / 2);
-    padding-bottom: calc((var(--height-menu) - var(--font-size-icon)) / 2);
-    padding-left: calc(var(--height-menu) - var(--font-size-icon));
-    padding-right: calc(var(--height-menu) - var(--font-size-icon));
+    padding: calc((var(--height-menu) - var(--font-size-icon)) / 2);
     transition: all .5s ease-out !important;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
