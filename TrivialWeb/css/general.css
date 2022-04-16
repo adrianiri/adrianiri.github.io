@@ -62,3 +62,11 @@ h2 {
 .oculto {
 	display: none !important;
 }
+button{
+    line-height: 20px;
+    margin-top: 3px;
+    margin-left: 3px;
+    position:absolute;
+    top:0;
+    left:0;
+}
