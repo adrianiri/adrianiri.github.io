@@ -14,9 +14,10 @@
     margin: var(--p2-margin) auto;
     padding: 0;
     border: var(--borde-fino);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,var(--opacidad-media));
     position: relative;
     overflow: auto;
+    border-radius: var(--borde-radio);
 }
 #p2 > form > header {
 	width: calc(var(--p2-form-width) - (2 * var(--p2-padding) + 2 * var(--p2-margin)));
@@ -26,7 +27,8 @@
 	margin: var(--p2-margin);
     padding: var(--p2-padding);
     font-weight: bold;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,var(--opacidad-media));
+    border-radius: var(--borde-radio);
 }
 #p2 > form > section {
     width: calc(var(--p2-form-width) - (2 * var(--p2-padding)));
