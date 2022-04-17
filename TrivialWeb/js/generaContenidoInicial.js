@@ -65,8 +65,11 @@ function generaTabla() {
             containerBarra.classList.add("oculto");
             header.classList.remove("oculto");
             tabla.classList.remove("oculto");
-            var p1 = document.querySelector("#uno");
-            p1.click();
+            // Se habilita la primera pantalla y se va a la misma
+            condicionesUno = true;
+            condicionesDos = true;
+            var uno = document.querySelector("#uno");
+            uno.click();
             clearInterval(crono);
         }
         i++;
