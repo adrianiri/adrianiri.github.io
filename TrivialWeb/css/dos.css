@@ -7,9 +7,6 @@
     --p2-form-hijo-width: 200px;
     --p2-form-header-fondo: darkgreen;
 }
-#p2 {
-    overflow: auto;
-}
 #p2 > form {
     background-color: var(--fondo-medio);
     width: var(--p2-form-width);

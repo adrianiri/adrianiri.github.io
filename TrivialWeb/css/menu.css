@@ -26,6 +26,9 @@ body {
     position: absolute;
     z-index: -1;
 }
+#p1,#p2, #p3, #p4 {
+    overflow: auto;
+}
 #p1 {
     top: var(--height-menu);
 }

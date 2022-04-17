@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1000px) {
+@media (orientation: portrait) {
     table {
         display: table;
         border-collapse: collapse;
