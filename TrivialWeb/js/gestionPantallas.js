@@ -114,3 +114,13 @@ habilitaDos = function() {
     var uno = document.querySelector("#dos");
     dos.style.color = "green";
 }
+habilitaTres = function() {
+    condicionesTres = true;
+    var tres = document.querySelector("#tres");
+    tres.style.color = "green";
+}
+habilitaCuatro = function() {
+    condicionesCuatro = true;
+    var cuatro = document.querySelector("#cuatro");
+    cuatro.style.color = "green";
+}

@@ -68,6 +68,8 @@ function generaTabla() {
             // Se habilita la primera pantalla y se va a la misma
             habilitaUno();
             habilitaDos();
+            habilitaTres();
+            habilitaCuatro();
             clicaUno();
             clearInterval(crono);
         }
