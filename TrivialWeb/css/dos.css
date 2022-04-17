@@ -5,7 +5,7 @@
     --p2-form-height: calc(100vh - var(--height-titulo) - 2 *  var(--p2-margin));
     --p2-form-header-height: 40px;
     --p2-form-hijo-width: 200px;
-    --p2-form-header-fondo: darkgreen;
+    --p2-form-header-fondo: green;
 }
 #p2 > form {
     background-color: var(--fondo-medio);

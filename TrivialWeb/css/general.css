@@ -13,6 +13,7 @@
     --opacidad-total:1;
     --opacidad-media:0.90;
     --borde-letra-blanco: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 0.5px 0.5px #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff;
+    --borde-letra-negro: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 0.5px 0.5px #000, -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000;
     --height-titulo: 50px;
     --height-cabecera: 30px;
     --transicion: 0s;
@@ -51,7 +52,7 @@ h2 {
 }
 #div_title {
     height: var(--height-titulo);
-    background-color: var(--fondo-oscuro);
+    background-color: var(--fondo-medio-oscuro);
     border: var(--borde-fino);
     z-index: -1;
 }

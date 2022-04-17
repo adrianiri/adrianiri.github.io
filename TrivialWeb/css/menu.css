@@ -2,7 +2,7 @@
     --height-menu: 50px;
     --font-size-icon: 20px;
     --escalado-icono-grande: 1.5;
-    --escalado-icono-pequeño: 0.8;
+    --escalado-icono-pequeño: 1;
     --translateY: calc(100vh + var(--height-menu));
     --fondo-uno: transparent;
     --fondo-dos: green;
