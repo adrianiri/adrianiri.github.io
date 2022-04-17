@@ -16,7 +16,6 @@
     border: var(--borde-fino);
     box-shadow: 0 10px 20px 0 rgba(0,0,0,var(--opacidad-media));
     position: relative;
-    overflow: auto;
     border-radius: var(--borde-radio);
 }
 #p2 > form > header {
@@ -32,6 +31,7 @@
 }
 #p2 > form > section {
     width: calc(var(--p2-form-width) - (2 * var(--p2-padding)));
+    height: calc(var(--p2-form-height) - 2px - var(--p2-form-header-height) - 2 * var(--p2-padding));
 	margin: var(--p2-margin);
     padding: 0;
     /* Para los hijos */
@@ -39,6 +39,7 @@
     justify-content: center;
     /* Del padre */
     display: flex;
+    overflow: scroll;
 }
 #p2 > form > section > .p2_hijo {
     width: var(--p2-form-hijo-width);
