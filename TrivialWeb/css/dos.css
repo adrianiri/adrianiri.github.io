@@ -1,42 +1,53 @@
 :root {
     --p2-margin: 10px;
     --p2-padding: 10px;
-    --p2-form-width: 300px;
+    --p2-form-width: calc(100vw - (2 * var(--p2-margin) + 2 * var(--p2-padding)));
     --p2-form-height: 300px;
     --p2-form-header-height: var(--height-cabecera);
+    --p2-form-hijo-width: 200px;
 }
 #p2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     overflow: auto;
 }
 #p2 > form {
     background-color: var(--fondo-medio);
     width: var(--p2-form-width);
     height: auto;
-    margin: var(--p2-margin);
-    padding: var(--p2-padding);
-    text-align: center;
+    margin: var(--p2-margin) auto;
+    padding: 0;
     border: var(--borde-fino);
     box-shadow: 0 10px 20px 0 rgba(0,0,0,0.4);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    position: relative;
 }
 #p2 > form > header {
-	width: calc(var(--p2-form-width) - var(--p2-margin));
+	width: calc(var(--p2-form-width) - (2 * var(--p2-padding)));
     height: var(--p2-form-header-height);
     background-color: var(--fondo-medio-oscuro);
 	margin: var(--p2-margin);
-    padding-top: 10px;
+    padding: var(--p2-padding);
     font-weight: bold;
 }
 #p2 > form > section {
-	width: calc(var(--p2-form-width) - var(--p2-margin));
+    width: calc(var(--p2-form-width) - (2 * var(--p2-padding)));
 	margin: var(--p2-margin);
+    padding: 0;
+    /* Para los hijos */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Del padre */
+    display: flex;
+}
+#p2 > form > section > .p2_hijo {
+    width: var(--p2-form-hijo-width);
+    margin: var(--p2-margin);
     padding: var(--p2-padding);
 }
-#p2 > form > section > .checkbox {
+.anchisimo {
+    width: 100% !important;
+}
+.izquierda {
     text-align: left;
+}
+.centro {
+    text-align: center;
 }

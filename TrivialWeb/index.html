@@ -32,6 +32,7 @@
             <h2>TRIVIAL</h2>
         </div>
         <ul id="menu">
+            <!-- Las funciones de visibilidad hacen (temporalmente) visibles todas las pantallas, para poder ver las transiciones -->
             <a href="#t1" onclick="visibilidadUno()"><li class="icon fas fa-book" id="uno"></li></a>
             <a href="#t2" onclick="visibilidadDos()"><li class="icon fa fa-cogs" id="dos"></li></a>
             <a href="#t3" onclick="visibilidadTres()"><li class="icon fas fa-gamepad" id="tres"></li></a>
@@ -41,12 +42,14 @@
         </div>
         <div class="page" id="p2">
             <form action="">
-                <header>PARAMETRIZACIÓN DEL JUEGO</header>
+                <header class="centro">PARAMETRIZACIÓN DEL JUEGO</header>
                 <section class="cuerpo-formu">
-                    <p>Introducir el número de preguntas:</p>
-                    <input type="text"></input>
-                    <p>Seleccionar el tipo de preguntas:</p>
-                    <div class="checkbox">
+                    <div class="p2_hijo centro">
+                        <p>Introducir el número de preguntas:</p>
+                        <input type="text"></input>
+                    </div>
+                    <div class="p2_hijo izquierda">
+                        <p>Seleccionar el tipo de preguntas:</p>
                         <input type="checkbox" id="meaning" name="meaning" value="true">
                         <label for="meaning"> Meaning</label><br>
                         <input type="checkbox" id="synonyms" name="synonyms" value="true">
@@ -63,7 +66,9 @@
                         <label for="antonimos"> Antónimos</label><br>
                         <br>
                     </div>
-                    <input type="submit" value="btnJugar">
+                    <div class="p2_hijo centro anchisimo">
+                        <input type="submit" value="A JUGAR!">
+                    </div>
                 </section>
             </form> 
         </div>  
