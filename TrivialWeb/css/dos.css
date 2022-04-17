@@ -33,20 +33,19 @@
     height: calc(var(--p2-form-height) - 2px - var(--p2-form-header-height) - 2 * var(--p2-padding) - 1 * var(--p2-margin));
 	margin: var(--p2-margin);
     padding: 0;
-    /* Para los hijos */
-    flex-wrap: wrap;
-    justify-content: center;
-    /* Del padre */
-    display: flex;
     overflow: auto;
     border-radius: var(--borde-radio);
+    /* Para los hijos */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
 }
 #p2 > form > section > .p2_hijo {
     width: var(--p2-form-hijo-width);
     height: fit-content;
     margin: var(--p2-margin);
     padding: var(--p2-padding);
-    border: var(--borde-fino);
 }
 .anchisimo {
     width: 100% !important;
