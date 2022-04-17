@@ -78,18 +78,19 @@ ul .icon:hover {
     -o-transform: scale(var(--escalado-icono-grande)) !important;
     text-shadow: var(--borde-letra-blanco);
 }
-/*#t1:target #uno {
+/* AHORA SE HACE POR JAVASCRIPT:
+#t1:target #uno {
     color: black;
 }
 #t2:target #dos {
     color: var(--fondo-dos);
-}*/
+}
 #t3:target #tres {
     color: var(--fondo-tres);
 }
 #t4:target #cuatro {
     color: var(--fondo-cuatro);
-}
+}*/
 #tres,
 #cuatro {
     float: right;

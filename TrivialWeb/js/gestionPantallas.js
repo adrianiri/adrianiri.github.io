@@ -124,3 +124,23 @@ habilitaCuatro = function() {
     var cuatro = document.querySelector("#cuatro");
     cuatro.style.color = "saddlebrown";
 }
+deshabilitaUno = function() {
+    condicionesUno = false;
+    var uno = document.querySelector("#uno");
+    uno.style.color = "rgb(200,200,200)";
+}
+deshabilitaDos = function() {
+    condicionesDos = false;
+    var dos = document.querySelector("#dos");
+    dos.style.color = "rgb(200,200,200)";
+}
+deshabilitaTres = function() {
+    condicionesTres = false;
+    var tres = document.querySelector("#tres");
+    tres.style.color = "rgb(200,200,200)";
+}
+deshabilitaCuatro = function() {
+    condicionesCuatro = false;
+    var cuatro = document.querySelector("#cuatro");
+    cuatro.style.color = "rgb(200,200,200)";
+}

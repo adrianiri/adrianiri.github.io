@@ -46,6 +46,8 @@ function generaTabla() {
     var arrTraduccionesJSON = JSON.parse(this.responseText);
     var containerBarra = document.querySelector(".container");
     totalTraducciones = Object.keys(arrTraduccionesJSON).length;
+    habilitaTres();
+    habilitaCuatro();
     var i = 0;
     var crono = setInterval(function() { 
         datos.push(arrTraduccionesJSON[i]); //Mete dato al final de la variable datos
@@ -68,8 +70,8 @@ function generaTabla() {
             // Se habilita la primera pantalla y se va a la misma
             habilitaUno();
             habilitaDos();
-            habilitaTres();
-            habilitaCuatro();
+            deshabilitaTres();
+            deshabilitaCuatro();
             clicaUno();
             clearInterval(crono);
         }

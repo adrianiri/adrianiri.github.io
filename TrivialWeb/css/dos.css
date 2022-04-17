@@ -7,7 +7,7 @@
     --p2-form-hijo-width: 200px;
     --p2-form-header-fondo: green;
 }
-#p2 > form {
+#p2 > .formulario {
     background-color: var(--fondo-medio);
     width: var(--p2-form-width);
     height: calc(var(--p2-form-height) - 2px); /* 2px de borde */
@@ -17,7 +17,7 @@
     position: relative;
     border-radius: var(--borde-radio);
 }
-#p2 > form > header {
+#p2 > .formulario > header {
 	width: calc(var(--p2-form-width) - (2 * var(--p2-padding) + 2 * var(--p2-margin)));
     height: calc(var(--p2-form-header-height) - 2 * var(--p2-padding));
     background-color: var(--p2-form-header-fondo);
@@ -28,7 +28,7 @@
     box-shadow: 0 10px 20px 0 rgba(0,0,0,var(--opacidad-media));
     border-radius: var(--borde-radio);
 }
-#p2 > form > section {
+#p2 > .formulario > section {
     width: calc(var(--p2-form-width) - (2 * var(--p2-padding)));
     height: calc(var(--p2-form-height) - 2px - var(--p2-form-header-height) - 2 * var(--p2-padding) - 1 * var(--p2-margin));
 	margin: var(--p2-margin);
@@ -41,7 +41,7 @@
     justify-content: center;
     align-content: flex-start;
 }
-#p2 > form > section > .p2_hijo {
+#p2 > .formulario > section > .p2_hijo {
     width: var(--p2-form-hijo-width);
     height: fit-content;
     margin: var(--p2-margin);
@@ -55,4 +55,7 @@
 }
 .centro {
     text-align: center;
+}
+#p2 button {
+    font-weight: bold;
 }
