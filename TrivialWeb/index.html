@@ -18,6 +18,7 @@
     <!-- ************ SCRIPTS ************ -->
     <script src="jquery/jquery-3.6.0.min.js"></script>
     <script src="js/claseFila.js"></script>
+    <script src="js/gestionPantallas.js"></script>
     <script src="js/funciones.js"></script>
     <script src="js/barraProgreso.js"></script>
     <script src="js/generaContenidoInicial.js"></script>
@@ -32,11 +33,12 @@
             <h2>TRIVIAL</h2>
         </div>
         <ul id="menu">
-            <!-- Las funciones de visibilidad hacen (temporalmente) visibles todas las pantallas, para poder ver las transiciones -->
-            <a href="#t1" onclick="return visibilidadUno();"><li class="icon fas fa-book" id="uno"></li></a>
-            <a href="#t2" onclick="return visibilidadDos();"><li class="icon fa fa-cogs" id="dos"></li></a>
-            <a href="#t3" onclick="return visibilidadTres();"><li class="icon fas fa-gamepad" id="tres"></li></a>
-            <a href="#t4" onclick="return visibilidadCuatro();"><li class="icon fas fa-check-circle" id="cuatro"></li></a>
+            <!-- Las funciones hacen (temporalmente) visibles todas las pantallas, para poder ver las transiciones -->
+            <!-- Además de eso, me permite controlar permisos -->
+            <a href="#t1" onclick="return pantallaUno();"><li class="icon fas fa-book" id="uno"></li></a>
+            <a href="#t2" onclick="return pantallaDos();"><li class="icon fa fa-cogs" id="dos"></li></a>
+            <a href="#t3" onclick="return pantallaTres();"><li class="icon fas fa-gamepad" id="tres"></li></a>
+            <a href="#t4" onclick="return pantallaCuatro();"><li class="icon fas fa-check-circle" id="cuatro"></li></a>
         </ul>
         <div class="page" id="p1">
         </div>

@@ -66,10 +66,9 @@ function generaTabla() {
             header.classList.remove("oculto");
             tabla.classList.remove("oculto");
             // Se habilita la primera pantalla y se va a la misma
-            condicionesUno = true;
-            condicionesDos = true;
-            var uno = document.querySelector("#uno");
-            uno.click();
+            habilitaUno();
+            habilitaDos();
+            clicaUno();
             clearInterval(crono);
         }
         i++;
