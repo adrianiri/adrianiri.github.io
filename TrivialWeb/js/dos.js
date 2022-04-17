@@ -4,9 +4,12 @@ function inicializarDos() {
     // Mucho menos generarlo dinámicamente
 }
 function comenzarJuego() {
-    var numPreguntas = document.querySelector("#numPreguntas");
-    if (numPreguntas.value != "") {
-
+    var txtNumPreguntas = document.querySelector("#txtNumPreguntas");
+    if (txtNumPreguntas.value != "") {
+        // Se preparan variables globales
+        // *************************** txtNumPreguntas.value *****************************
+        numPreguntas = txtNumPreguntas.Value                                            //
+        // *******************************************************************************
     } else {
         alert("Debe especificar un número de preguntas");
     }
