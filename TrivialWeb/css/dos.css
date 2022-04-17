@@ -1,10 +1,11 @@
 :root {
     --p2-margin: 10px;
     --p2-padding: 10px;
-    --p2-form-width: calc(100vw - (2 * var(--p2-margin) + 2 * var(--p2-padding)));
+    --p2-form-width: calc(100vw - (2 * var(--p2-margin)));
     --p2-form-height: 300px;
-    --p2-form-header-height: var(--height-cabecera);
+    --p2-form-header-height: calc(var(--height-cabecera) / 2);
     --p2-form-hijo-width: 200px;
+    --p2-form-header-fondo: darkgreen;
 }
 #p2 {
     overflow: auto;
@@ -20,9 +21,10 @@
     position: relative;
 }
 #p2 > form > header {
-	width: calc(var(--p2-form-width) - (2 * var(--p2-padding)));
+	width: calc(var(--p2-form-width) - (2 * var(--p2-padding) + 2 * var(--p2-margin)));
     height: var(--p2-form-header-height);
-    background-color: var(--fondo-medio-oscuro);
+    background-color: var(--p2-form-header-fondo);
+    color: var(--letra-clara);
 	margin: var(--p2-margin);
     padding: var(--p2-padding);
     font-weight: bold;
