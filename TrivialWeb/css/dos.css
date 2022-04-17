@@ -14,7 +14,6 @@
     margin: var(--p2-margin) auto;
     padding: 0;
     border: var(--borde-fino);
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,var(--opacidad-media));
     position: relative;
     border-radius: var(--borde-radio);
 }
@@ -39,7 +38,7 @@
     justify-content: center;
     /* Del padre */
     display: flex;
-    overflow-x: scroll;
+    overflow-y: scroll;
 }
 #p2 > form > section > .p2_hijo {
     width: var(--p2-form-hijo-width);
