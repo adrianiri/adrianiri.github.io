@@ -1,4 +1,4 @@
-@media (orientation: landscape) {
+@media only screen and (min-width: 1000px) {
     #div_header {
         position: fixed;
         top: var(--height-titulo);

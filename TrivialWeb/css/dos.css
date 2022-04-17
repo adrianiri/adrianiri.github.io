@@ -28,6 +28,7 @@
 	margin: var(--p2-margin);
     padding: var(--p2-padding);
     font-weight: bold;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.4);
 }
 #p2 > form > section {
     width: calc(var(--p2-form-width) - (2 * var(--p2-padding)));
