@@ -117,10 +117,10 @@ habilitaDos = function() {
 habilitaTres = function() {
     condicionesTres = true;
     var tres = document.querySelector("#tres");
-    tres.style.color = "green";
+    tres.style.color = "blue";
 }
 habilitaCuatro = function() {
     condicionesCuatro = true;
     var cuatro = document.querySelector("#cuatro");
-    cuatro.style.color = "green";
+    cuatro.style.color = "saddlebrown";
 }
