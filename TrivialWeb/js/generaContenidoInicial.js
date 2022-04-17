@@ -47,6 +47,7 @@ function generaTabla() {
     var containerBarra = document.querySelector(".container");
     totalTraducciones = Object.keys(arrTraduccionesJSON).length;
     var i = 0;
+    insertarPrimeraFila(); // Para la tabla de traducciones simulada
     var crono = setInterval(function() { 
         datos.push(arrTraduccionesJSON[i]); //Mete dato al final de la variable datos
         new Fila(
@@ -60,12 +61,16 @@ function generaTabla() {
             arrTraduccionesJSON[i].Sinónimos,
             arrTraduccionesJSON[i].Antónimos
         );
-        actualizaBarraProgreso(i,totalTraducciones);
+        if (i < totalTraducciones - 1) {
+            insertarFilaIntermedia(arrTraduccionesJSON[i]); // Para la tabla de traducciones simulada
+        } else {
+            insertarUltimaFila(arrTraduccionesJSON[i]); // Para la tabla de traducciones simulada
+            generarTablaTraducciones(tablaTraducciones);
+        }
         if (i == totalTraducciones - 1) {
             containerBarra.classList.add("oculto");
             header.classList.remove("oculto");
             tabla.classList.remove("oculto");
-            // Se habilita la primera pantalla y se va a la misma
             habilitaUno();
             habilitaDos();
             habilitaTres();
@@ -74,6 +79,7 @@ function generaTabla() {
             clearInterval(crono);
         }
         i++;
+        actualizaBarraProgreso(i,totalTraducciones);
     }, 0) //Esta jugada sustituye a un for() para poder actualizar la UI y mostrar la barra de progreso
 }
 // AJAX
