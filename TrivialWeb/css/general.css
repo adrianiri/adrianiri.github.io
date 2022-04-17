@@ -63,6 +63,9 @@ h2 {
 .oculto {
 	display: none !important;
 }
+.invisible {
+	visibility: hidden !important;
+}
 button{
     line-height: 20px;
     margin-top: 3px;
