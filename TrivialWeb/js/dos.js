@@ -42,7 +42,7 @@ function comenzarJuego() {
                 return;
             }
         }
-        clicaTres(); // Manda a la pantalla del juego
+        clicaCuatro(); // Manda a la pantalla del juego
     } else {
         alert(errores);
         return;

@@ -6,8 +6,8 @@
     --translateY: calc(100vh + var(--height-menu));
     --fondo-uno: transparent;
     --fondo-dos: green;
-    --fondo-tres: blue;
-    --fondo-cuatro: saddlebrown;
+    --fondo-tres: saddlebrown;
+    --fondo-cuatro: blue;
     --transicion-p: 0.25s;
 }
 body {

@@ -151,12 +151,12 @@ habilitaDos = function() {
 habilitaTres = function() {
     condicionesTres = true;
     var tres = document.querySelector("#tres");
-    tres.style.color = "blue";
+    tres.style.color = "saddlebrown";
 }
 habilitaCuatro = function() {
     condicionesCuatro = true;
     var cuatro = document.querySelector("#cuatro");
-    cuatro.style.color = "saddlebrown";
+    cuatro.style.color = "blue";
 }
 deshabilitaUno = function() {
     condicionesUno = false;
