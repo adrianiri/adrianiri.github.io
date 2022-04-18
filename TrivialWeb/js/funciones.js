@@ -7,32 +7,34 @@ function getParentFolder() {
 }
 // DEL EXCEL
 function filasTraducidas(numColumnas) {
-    var fila;
     var columna;
     var contTraducciones;
     var contTraduccionesValidas;
-    // Añado las filas con más de 1 campo relleno en colecFilasPreguntables, pero si no encuentro campos rellenos, salgo
-    fila = 1;
-    while (true) {
+    // Añado las filas, con al menos 1 campo relleno, en colecFilasPreguntables.
+    // Si no encuentro campos rellenos, salgo de la función porque se ha acabado la tabla
+    for (var fila = 1; fila < tablaTraducciones.length; fila ++) {
         columna = 0;
         contTraducciones = 0;
         contTraduccionesValidas = 0;
         while (columna < numColumnas) {
             // Registra cada campo válido
             if (leerTablaTraducciones(fila, columna) != ""
-            && contTraducciones > 0
-            && colecEncabezadosSeleccionados.includes(leerTablaTraducciones(fila, columna))) {
-                contTraduccionesValidas += 1;
-            }
-            // Registra cada campo
-            if (leerTablaTraducciones(fila, columna) != "") {
-                contTraducciones += 1;
-            }
-            // En cuanto hay dos, ya sabemos que esa fila es traducible
-            if (contTraduccionesValidas > 0) {
+            && contTraducciones > 0 // Porque la primera que encuentre será "Word" o "Expression"
+            && colecEncabezadosSeleccionados.includes(leerTablaTraducciones(filaEncabezado, columna))) {
+                // En cuanto hay una, ya sabemos que esa fila es traducible
                 colecFilasPreguntables.push(fila);
+                break;
             }
-            // VOY POR AQUÍ!!!!!!!!!!!!!!!!!!
+            // Registra cada campo, para poder salir de la tabla si no encuentra ninguna
+            if (leerTablaTraducciones(fila, columna) != "") {
+                contTraducciones ++;
+            }
+            columna ++;
         }
+        // Si se acaba la tabla sale del bucle
+        if (tabla = 0) {
+            return;
+        }    
     }
+    alert("Listo");
 }

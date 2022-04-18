@@ -5,11 +5,11 @@ let numColumnas;
 let respuestaUsuario;
 let respuestaCorrecta;
 let numCorrectas;
-let colecFilasPreguntables;
-let colecFilasPreguntablesCopia;
+let colecFilasPreguntables = [];
+let colecFilasPreguntablesCopia = [];
 let colecEncabezadosSeleccionados = ["Meaning","Synonyms","Antonyms","Palabra","Expresión","Sinónimos","Antónimos"]; // Está sin programar
-let colecNiveles;
-let colecResumenNiveles;
+let colecNiveles = [];
+let colecResumenNiveles = [];
 let memSeleccionarTodo;
 let dTime;
 let mensaje;
