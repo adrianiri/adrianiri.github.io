@@ -36,5 +36,5 @@ function filasTraducidas(numColumnas) {
             return;
         }    
     }
-    alert("Listo");
+    alert(`colecFilasPreguntables contiene ${colecFilasPreguntables.length} elementos`);
 }
