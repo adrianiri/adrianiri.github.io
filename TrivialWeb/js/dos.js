@@ -6,6 +6,7 @@ function inicializarDos() {
 function comenzarJuego() {
     var txtNumPreguntas = document.querySelector("#txtNumPreguntas");
     var errores = "";
+    var nivel;
     if (txtNumPreguntas.value == "") {
         errores = "- Debe especificar un número de preguntas\n";
     }
@@ -19,6 +20,7 @@ function comenzarJuego() {
         /////////////////////////////////////////////////////////////////////////
         numPregunta = 1;
         numCorrectas = 0;
+        colecNiveles = [];
         // Se genera la colección de filas preguntables
         filaEncabezado = 0;
         numColumnas = tablaTraducciones[filaEncabezado].length;
@@ -36,9 +38,11 @@ function comenzarJuego() {
         }
         // Se genera la colección completa de preguntas
         for (var i = 0; i < numPreguntas; i++) {
-            colecNiveles.push(generarNivel());
-            // En caso de que no hubiera suficientes respuestas, te echa
-            if (colecNiveles[i] == "") {
+            nivel = generarNivel();
+            if (nivel) {
+                colecNiveles.push(nivel);
+            } else {
+                alert(`Se ha generado un problema al generar la pregunta número ${i + 1}`);
                 return;
             }
         }
@@ -115,8 +119,8 @@ function generarNivel() {
     }
     // Si no hay suficientes respuestas te echa de la función
     if (colecTraducciones.length < 3) { // Mínimo 3 (+ la respuesta correcta aparte)
-        alert(`En la pregunta generada número ${colecNiveles.length + 1} solo se encuentran ${colecTraducciones.Count + 1} posible(s) respuestas para la categoría ${colecEncabezados[traduccionAleatoria]} --> Volver a probar`);
-        return;
+        alert(`Al generar la pregunta número ${colecNiveles.length + 1} no se encuentran suficientes respuestas para la categoría ${colecEncabezados[traduccionAleatoria]} --> Volver a probar`);
+        return false;
     }
     // Va escribiendo las respuestas
     while (colecRespuestas.length < 4) {
