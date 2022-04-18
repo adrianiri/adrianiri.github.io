@@ -5,7 +5,7 @@ let condicionesUno = false;
 let condicionesDos = false;
 let condicionesTres = false;
 let condicionesCuatro = false;
-var tiempoTransiciones = 250; // ms
+var tiempoTransiciones = 500; // ms
 pantallaUno = function() {
     if (condicionesUno) {
         var p1 = document.querySelector("#p1");
@@ -16,11 +16,19 @@ pantallaUno = function() {
         p2.classList.remove("invisible");
         p3.classList.remove("invisible");
         p4.classList.remove("invisible");
+        p1.classList.add("transicion-in");
+        p2.classList.add("transicion-out");
+        p3.classList.add("transicion-out");
+        p4.classList.add("transicion-out");
         var crono = setTimeout(function() {
             p1.classList.remove("invisible");
             p2.classList.add("invisible");
             p3.classList.add("invisible");
             p4.classList.add("invisible");
+            p1.classList.remove("transicion-in");
+            p2.classList.remove("transicion-out");
+            p3.classList.remove("transicion-out");
+            p4.classList.remove("transicion-out");
         }, tiempoTransiciones);
         return "#t1";
     } else {
@@ -37,11 +45,19 @@ pantallaDos = function() {
         p2.classList.remove("invisible");
         p3.classList.remove("invisible");
         p4.classList.remove("invisible");
+        p1.classList.add("transicion-out");
+        p2.classList.add("transicion-in");
+        p3.classList.add("transicion-out");
+        p4.classList.add("transicion-out");
         var crono = setTimeout(function() {
             p1.classList.remove("invisible");
             p2.classList.remove("invisible");
             p3.classList.add("invisible");
             p4.classList.add("invisible");
+            p1.classList.remove("transicion-out");
+            p2.classList.remove("transicion-in");
+            p3.classList.remove("transicion-out");
+            p4.classList.remove("transicion-out");
         }, tiempoTransiciones);
         return "#t2";
     } else {
@@ -58,11 +74,19 @@ pantallaTres = function() {
         p2.classList.remove("invisible");
         p3.classList.remove("invisible");
         p4.classList.remove("invisible");
+        p1.classList.add("transicion-out");
+        p2.classList.add("transicion-out");
+        p3.classList.add("transicion-in");
+        p4.classList.add("transicion-out");
         var crono = setTimeout(function() {
             p1.classList.remove("invisible");
             p2.classList.add("invisible");
             p3.classList.remove("invisible");
             p4.classList.add("invisible");
+            p1.classList.remove("transicion-out");
+            p2.classList.remove("transicion-out");
+            p3.classList.remove("transicion-in");
+            p4.classList.remove("transicion-out");
         }, tiempoTransiciones);
         return "#t3";
     } else {
@@ -79,11 +103,19 @@ pantallaCuatro = function() {
         p2.classList.remove("invisible");
         p3.classList.remove("invisible");
         p4.classList.remove("invisible");
+        p1.classList.add("transicion-out");
+        p2.classList.add("transicion-out");
+        p3.classList.add("transicion-out");
+        p4.classList.add("transicion-in");
         var crono = setTimeout(function() {
             p1.classList.remove("invisible");
             p2.classList.add("invisible");
             p3.classList.add("invisible");
             p4.classList.remove("invisible");
+            p1.classList.remove("transicion-out");
+            p2.classList.remove("transicion-out");
+            p3.classList.remove("transicion-out");
+            p4.classList.remove("transicion-in");
         }, tiempoTransiciones);
         return "#t4";
     } else {
@@ -113,7 +145,7 @@ habilitaUno = function() {
 }
 habilitaDos = function() {
     condicionesDos = true;
-    var uno = document.querySelector("#dos");
+    var dos = document.querySelector("#dos");
     dos.style.color = "green";
 }
 habilitaTres = function() {

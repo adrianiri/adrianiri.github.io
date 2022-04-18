@@ -18,15 +18,18 @@ body {
     height: calc(100vh - var(--height-menu));
     margin: 0;
     padding: 0;
-    /* Me daba problemas porque no sabía bloquear la transición cuando cambiaba la orientación */
-    transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
-    -webkit-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
-    -moz-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
-    -o-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
     overflow: hidden; 
     position: absolute;
     z-index: -1;
 }
+.transicion-out {
+    /* valores de cubic-bezier equivalentes a "ease-out" */
+    transition: all var(--transicion-p) cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    -webkit-transition: all var(--transicion-p) cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    -moz-transition: all var(--transicion-p) cubic-bezier(0.0, 0.0, 0.58, 1.0);
+    -o-transition: all var(--transicion-p) cubic-bezier(0.0, 0.0, 0.58, 1.0);
+}
+
 #p1,#p2, #p3, #p4 {
     overflow: auto;
 }
@@ -47,12 +50,14 @@ body {
     -webkit-transform: translateY(var(--translateY));
     -moz-transform: translateY(var(--translateY));
     -o-transform: translateY(var(--translateY));
-    /* Me daba problemas porque no sabía bloquear la transición cuando cambiaba la orientación */
-    /*transition: all var(--transicion-p) cubic-bezier(.25, 1, .5, 1.25);
-    -webkit-transition: all var(--transicion-p) cubic-bezier(.25, 1, .5, 1.25);
-    -moz-transition: all var(--transicion-p) cubic-bezier(.25, 1, .5, 1.25);
-    -o-transition: all var(--transicion-p) cubic-bezier(.25, 1, .5, 1.25);
-    transition-delay: var(--transicion-p) !important;*/
+}
+.transicion-in {
+    /* valores de cubic-bezier equivalentes a "ease-in" */
+    transition: all var(--transicion-p) cubic-bezier(0.42, 0, 1, 1);
+    -webkit-transition: all var(--transicion-p) cubic-bezier(0.42, 0, 1, 1);
+    -moz-transition: all var(--transicion-p) cubic-bezier(0.42, 0, 1, 1);
+    -o-transition: all var(--transicion-p) cubic-bezier(0.42, 0, 1, 1);
+    transition-delay: var(--transicion-p) !important;
 }
 .icon {
     color: var(--letra-media);
