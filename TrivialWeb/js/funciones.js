@@ -36,7 +36,6 @@ function filasTraducidas(numColumnas) {
             return;
         }    
     }
-    alert(`colecFilasPreguntables contiene ${colecFilasPreguntables.length} elementos`);
 }
 function generarAleatorio(numTotal) {
     return Math.floor(Math.random() * numTotal); // Math.floor resta hasta llegar al primer número entero
