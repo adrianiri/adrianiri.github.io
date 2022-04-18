@@ -12,7 +12,7 @@ function filasTraducidas(numColumnas) {
     var contTraduccionesValidas;
     // Añado las filas, con al menos 1 campo relleno, en colecFilasPreguntables.
     // Si no encuentro campos rellenos, salgo de la función porque se ha acabado la tabla
-    for (var fila = 1; fila < tablaTraducciones.length; fila ++) {
+    for (var fila = 1; fila < tablaTraducciones.length; fila++) {
         columna = 0;
         contTraducciones = 0;
         contTraduccionesValidas = 0;
@@ -27,9 +27,9 @@ function filasTraducidas(numColumnas) {
             }
             // Registra cada campo, para poder salir de la tabla si no encuentra ninguna
             if (leerTablaTraducciones(fila, columna) != "") {
-                contTraducciones ++;
+                contTraducciones++;
             }
-            columna ++;
+            columna++;
         }
         // Si se acaba la tabla sale del bucle
         if (tabla = 0) {
@@ -37,4 +37,7 @@ function filasTraducidas(numColumnas) {
         }    
     }
     alert(`colecFilasPreguntables contiene ${colecFilasPreguntables.length} elementos`);
+}
+function generarAleatorio(numTotal) {
+    return Math.floor(Math.random() * numTotal); // Math.floor resta hasta llegar al primer número entero
 }
