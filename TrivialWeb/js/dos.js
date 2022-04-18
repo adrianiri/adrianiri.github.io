@@ -42,7 +42,6 @@ function comenzarJuego() {
             if (nivel) {
                 colecNiveles.push(nivel);
             } else {
-                alert(`Se ha generado un problema al generar la pregunta número ${i + 1}`);
                 return;
             }
         }
