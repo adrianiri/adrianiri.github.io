@@ -18,10 +18,11 @@ body {
     height: calc(100vh - var(--height-menu));
     margin: 0;
     padding: 0;
-    transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
+    /* Me daba problemas porque no sabía bloquear la transición cuando cambiaba la orientación */
+    /*transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
     -webkit-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
     -moz-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
-    -o-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);
+    -o-transition: all var(--transicion-p) cubic-bezier(0.54, 0.35, 0.29, 0.99);*/
     overflow: hidden; 
     position: absolute;
     z-index: -1;
@@ -46,11 +47,12 @@ body {
     -webkit-transform: translateY(var(--translateY));
     -moz-transform: translateY(var(--translateY));
     -o-transform: translateY(var(--translateY));
-    transition: all var(--transicion-p) cubic-bezier(.25, 1, .5, 1.25);
+    /* Me daba problemas porque no sabía bloquear la transición cuando cambiaba la orientación */
+    /*transition: all var(--transicion-p) cubic-bezier(.25, 1, .5, 1.25);
     -webkit-transition: all var(--transicion-p) cubic-bezier(.25, 1, .5, 1.25);
     -moz-transition: all var(--transicion-p) cubic-bezier(.25, 1, .5, 1.25);
     -o-transition: all var(--transicion-p) cubic-bezier(.25, 1, .5, 1.25);
-    transition-delay: var(--transicion-p) !important;
+    transition-delay: var(--transicion-p) !important;*/
 }
 .icon {
     color: var(--letra-media);
@@ -78,19 +80,6 @@ ul .icon:hover {
     -o-transform: scale(var(--escalado-icono-grande)) !important;
     text-shadow: var(--borde-letra-blanco);
 }
-/* AHORA SE HACE POR JAVASCRIPT:
-#t1:target #uno {
-    color: black;
-}
-#t2:target #dos {
-    color: var(--fondo-dos);
-}
-#t3:target #tres {
-    color: var(--fondo-tres);
-}
-#t4:target #cuatro {
-    color: var(--fondo-cuatro);
-}*/
 #tres,
 #cuatro {
     float: right;

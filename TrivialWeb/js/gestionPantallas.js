@@ -4,6 +4,7 @@ let condicionesUno = false;
 let condicionesDos = false;
 let condicionesTres = false;
 let condicionesCuatro = false;
+var tiempoTransiciones = 250; // ms
 pantallaUno = function() {
     if (condicionesUno) {
         var p1 = document.querySelector("#p1");
@@ -19,7 +20,7 @@ pantallaUno = function() {
             p2.classList.add("invisible");
             p3.classList.add("invisible");
             p4.classList.add("invisible");
-        }, 500);
+        }, tiempoTransiciones);
         return "#t1";
     } else {
         return false;
@@ -40,7 +41,7 @@ pantallaDos = function() {
             p2.classList.remove("invisible");
             p3.classList.add("invisible");
             p4.classList.add("invisible");
-        }, 500);
+        }, tiempoTransiciones);
         return "#t2";
     } else {
         return false;
@@ -61,7 +62,7 @@ pantallaTres = function() {
             p2.classList.add("invisible");
             p3.classList.remove("invisible");
             p4.classList.add("invisible");
-        }, 500);
+        }, tiempoTransiciones);
         return "#t3";
     } else {
         return false;
@@ -82,7 +83,7 @@ pantallaCuatro = function() {
             p2.classList.add("invisible");
             p3.classList.add("invisible");
             p4.classList.remove("invisible");
-        }, 500);
+        }, tiempoTransiciones);
         return "#t4";
     } else {
         return false;
@@ -94,6 +95,7 @@ clicaUno = function() {
 }
 clicaDos = function() {
     var dos = document.querySelector("#dos");
+    var p2 = document.querySelector("#p2");
     dos.click();
 }
 clicaTres = function() {
