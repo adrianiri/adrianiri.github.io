@@ -1,0 +1,52 @@
+:root {
+    --p3-margin: 10px;
+    --p3-padding: 10px;
+    --p3-form-width: calc(100vw - (2 * var(--p3-margin)));
+    --p3-form-height: calc(100vh - var(--height-titulo) - 2 *  var(--p3-margin));
+    --p3-form-header-height: 40px;
+    --p3-form-hijo-width: 200px;
+    --p3-form-header-fondo: saddlebrown;
+}
+#p3 > .formulario {
+    background-color: var(--fondo-medio);
+    width: var(--p3-form-width);
+    height: calc(var(--p3-form-height) - 2px); /* 2px de borde */
+    margin: var(--p3-margin) auto;
+    padding: 0;
+    border: var(--borde-fino);
+    position: relative;
+    border-radius: var(--borde-radio);
+}
+#p3 > .formulario > header {
+	width: calc(var(--p3-form-width) - (2 * var(--p3-padding) + 2 * var(--p3-margin)));
+    height: calc(var(--p3-form-header-height) - 2 * var(--p3-padding));
+    background-color: var(--p3-form-header-fondo);
+    color: var(--letra-clara);
+	margin: var(--p3-margin);
+    padding: var(--p3-padding);
+    font-weight: bold;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,var(--opacidad-media));
+    border-radius: var(--borde-radio);
+}
+#p3 > .formulario > section {
+    width: calc(var(--p3-form-width) - (2 * var(--p3-padding)));
+    height: calc(var(--p3-form-height) - 2px - var(--p3-form-header-height) - 2 * var(--p3-padding) - 1 * var(--p3-margin));
+	margin: var(--p3-margin);
+    padding: 0;
+    overflow: auto;
+    border-radius: var(--borde-radio);
+    /* Para los hijos */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+#p3 > .formulario > section > .p3_hijo {
+    width: var(--p3-form-hijo-width);
+    height: fit-content;
+    margin: var(--p3-margin);
+    padding: var(--p3-padding);
+}
+#p3 button {
+    font-weight: bold;
+}

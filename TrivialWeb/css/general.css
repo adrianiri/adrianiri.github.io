@@ -68,3 +68,12 @@ h2 {
 .invisible {
 	visibility: hidden !important;
 }
+.anchisimo {
+    width: 100% !important;
+}
+.izquierda {
+    text-align: left;
+}
+.centro {
+    text-align: center;
+}

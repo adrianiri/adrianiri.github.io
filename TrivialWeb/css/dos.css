@@ -47,15 +47,6 @@
     margin: var(--p2-margin);
     padding: var(--p2-padding);
 }
-.anchisimo {
-    width: 100% !important;
-}
-.izquierda {
-    text-align: left;
-}
-.centro {
-    text-align: center;
-}
 #p2 button {
     font-weight: bold;
 }

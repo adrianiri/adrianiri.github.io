@@ -1,0 +1,52 @@
+:root {
+    --p4-margin: 10px;
+    --p4-padding: 10px;
+    --p4-form-width: calc(100vw - (2 * var(--p4-margin)));
+    --p4-form-height: calc(100vh - var(--height-titulo) - 2 *  var(--p4-margin));
+    --p4-form-header-height: 40px;
+    --p4-form-hijo-width: 200px;
+    --p4-form-header-fondo: blue;
+}
+#p4 > .formulario {
+    background-color: var(--fondo-medio);
+    width: var(--p4-form-width);
+    height: calc(var(--p4-form-height) - 2px); /* 2px de borde */
+    margin: var(--p4-margin) auto;
+    padding: 0;
+    border: var(--borde-fino);
+    position: relative;
+    border-radius: var(--borde-radio);
+}
+#p4 > .formulario > header {
+	width: calc(var(--p4-form-width) - (2 * var(--p4-padding) + 2 * var(--p4-margin)));
+    height: calc(var(--p4-form-header-height) - 2 * var(--p4-padding));
+    background-color: var(--p4-form-header-fondo);
+    color: var(--letra-clara);
+	margin: var(--p4-margin);
+    padding: var(--p4-padding);
+    font-weight: bold;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,var(--opacidad-media));
+    border-radius: var(--borde-radio);
+}
+#p4 > .formulario > section {
+    width: calc(var(--p4-form-width) - (2 * var(--p4-padding)));
+    height: calc(var(--p4-form-height) - 2px - var(--p4-form-header-height) - 2 * var(--p4-padding) - 1 * var(--p4-margin));
+	margin: var(--p4-margin);
+    padding: 0;
+    overflow: auto;
+    border-radius: var(--borde-radio);
+    /* Para los hijos */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+#p4 > .formulario > section > .p4_hijo {
+    width: var(--p4-form-hijo-width);
+    height: fit-content;
+    margin: var(--p4-margin);
+    padding: var(--p4-padding);
+}
+#p4 button {
+    font-weight: bold;
+}
