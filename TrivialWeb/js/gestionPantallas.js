@@ -1,5 +1,6 @@
 // NOTAS: se utiliza la clase "invisible" porque "oculto" me generaba problemas de rendimiento,
-// ya que lo tenía que renderizar
+// ya que lo tenía que renderizar en el momento de la carga de la tabla
+// necesito "invisible" en caso de querer hacer una transición
 let condicionesUno = false;
 let condicionesDos = false;
 let condicionesTres = false;
@@ -95,7 +96,6 @@ clicaUno = function() {
 }
 clicaDos = function() {
     var dos = document.querySelector("#dos");
-    var p2 = document.querySelector("#p2");
     dos.click();
 }
 clicaTres = function() {
