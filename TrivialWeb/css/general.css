@@ -68,7 +68,7 @@ h2 {
 .invisible {
 	visibility: hidden !important;
 }
-.anchisimo {
+.anchisimo { /* para que su ancho sea 100% y así su flex box pase a la siguiente línea y quede siempre abajo */
     width: 100% !important;
 }
 .izquierda {

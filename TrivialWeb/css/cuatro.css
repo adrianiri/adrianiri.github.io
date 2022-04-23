@@ -1,6 +1,8 @@
 :root {
     --p4-margin: 10px;
     --p4-padding: 10px;
+    --p4-margin-hijos: 5px;
+    --p4-padding-hijos: 5px;
     --p4-form-width: calc(100vw - (2 * var(--p4-margin)));
     --p4-form-height: calc(100vh - var(--height-titulo) - 2 *  var(--p4-margin));
     --p4-form-header-height: 40px;
@@ -44,8 +46,8 @@
 #p4 > .formulario > section > .p4_hijo {
     width: var(--p4-form-hijo-width);
     height: fit-content;
-    margin: var(--p4-margin);
-    padding: var(--p4-padding);
+    margin: var(--p4-margin-hijos);
+    padding: var(--p4-padding-hijos);
 }
 #p4 button {
     font-weight: bold;
