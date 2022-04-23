@@ -6,7 +6,7 @@
     --p4-form-width: calc(100vw - (2 * var(--p4-margin)));
     --p4-form-height: calc(100vh - var(--height-titulo) - 2 *  var(--p4-margin));
     --p4-form-header-height: 40px;
-    --p4-form-hijo-width: 200px;
+    --p4-form-hijo-width: 400px;
     --p4-form-header-fondo: blue;
 }
 #p4 > .formulario {
