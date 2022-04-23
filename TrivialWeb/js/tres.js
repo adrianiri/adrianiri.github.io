@@ -25,7 +25,7 @@ function generacionCabeceraResumen() {
 }
 function generacionTablaResumen() {
     var p3 = document.querySelector("#p3 > div > section")
-    p3.innerHTML = `
+    p3.innerHTML += `
         <div id="div_table_resumen">
             <table id="table_resumen"></table>
         </div>
