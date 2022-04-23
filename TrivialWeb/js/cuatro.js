@@ -1,34 +1,11 @@
-function inicializarNivel() {
-    var pregunta = document.querySelector("#pregunta");
-    var encabezado = document.querySelector("#encabezado");
-    var div_respuestas = document.querySelector("#div_respuestas");
-    pregunta.innerHTML = `Pregunta x de y:<br><br><span style="font-weight:bold;">Pregunta?</span>`;
-    encabezado.innerHTML = `<span style="font-style:italic;">Encabezado...</span>`;
-    div_respuestas.innerHTML = `<label class"anchisimo">
-                                    <input type="radio" name="respuestas" id="respuesta0" class"" value="">
-                                    <label for="respuesta0"> Respuesta 0</label>
-                                </label>
-                                <br>
-                                <label class"anchisimo">
-                                    <input type="radio" name="respuestas" id="respuesta1" value="">
-                                    <label for="respuesta1"> Respuesta 1</label>
-                                </label>
-                                <br>
-                                <label class"anchisimo">
-                                    <input type="radio" name="respuestas" id="respuesta2" value="">
-                                    <label for="respuesta2"> Respuesta 2</label>
-                                </label>
-                                <br>
-                                <label class"anchisimo">
-                                    <input type="radio" name="respuestas" id="respuesta3" value="">
-                                    <label for="respuesta3"> Respuesta 3</label>
-                                </label>
-    `
+function inicializarJuego() {
+    colecResumenNiveles = [];
 }
 function extraerNivel() {
     var colecRespuestas = [];
+    numPregunta.innerHTML = `Pregunta ${numPregunta} de ${numPreguntas}:<br><br>`;
     ///////////////////////// pregunta.textContent /////////////////////////
-    pregunta.innerHTML = `Pregunta ${numPregunta} de ${numPreguntas}:<br><br><span style="font-weight:bold;">${colecNiveles[0].getPregunta()}?</span>`;
+    pregunta.innerHTML = `<span style="font-weight:bold;">${colecNiveles[0].getPregunta()}</span>`;
     /////////////////////////////////////////////////////////////////////////
     ///////////////////////// encabezado.textContent ////////////////////////
     encabezado.innerHTML = `<span style="font-style:italic;">${colecNiveles[0].getEncabezado()}</span>`;
@@ -78,14 +55,28 @@ function siguienteNivel() {
         } else {
             mensaje = `INCORRECTO :( --> La respuesta correcta era: ${respuestaCorrecta}`;
         }
-        //mandarNivelAResumen(respuestaUsuario);
+        mandarNivelAResumen(respuestaUsuario);
     }
     alert (mensaje);
     if (numPregunta < numPreguntas) {
         numPregunta += 1;
-        inicializarNivel();
         extraerNivel();
+        clicaCuatro();
     } else {
         clicaTres(); // Manda a la pantalla resumen
+        generacionCabeceraResumen();
+        generacionTablaResumen();
     }
+}
+function mandarNivelAResumen(respuestaUsuario) {
+    var resumenNivel = new Nivel();
+    var pregunta = document.querySelector("#pregunta");
+    var encabezado = document.querySelector("#encabezado");
+    // Se guarda la información del nivel actual en el objeto nivel
+    resumenNivel.setPregunta(pregunta.textContent);
+    resumenNivel.setEncabezado(encabezado.textContent);
+    resumenNivel.setRespuestaUsuario(respuestaUsuario);
+    resumenNivel.setRespuestaCorrecta(respuestaCorrecta);
+    // Se añade dicho objeto en la colección
+    colecResumenNiveles.push(resumenNivel);
 }

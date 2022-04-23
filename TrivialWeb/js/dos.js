@@ -60,7 +60,7 @@ function comenzarJuego() {
                 return;
             }
         }
-        inicializarNivel();
+        inicializarJuego();
         extraerNivel();
         clicaCuatro(); // Manda a la pantalla del juego
     } else {

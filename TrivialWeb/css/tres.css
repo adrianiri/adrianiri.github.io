@@ -4,7 +4,6 @@
     --p3-form-width: calc(100vw - (2 * var(--p3-margin)));
     --p3-form-height: calc(100vh - var(--height-titulo) - 2 *  var(--p3-margin));
     --p3-form-header-height: 40px;
-    --p3-form-hijo-width: 200px;
     --p3-form-header-fondo: saddlebrown;
 }
 #p3 > .formulario {
@@ -41,12 +40,92 @@
     justify-content: center;
     align-content: flex-start;
 }
-#p3 > .formulario > section > .p3_hijo {
-    width: var(--p3-form-hijo-width);
-    height: fit-content;
-    margin: var(--p3-margin);
-    padding: var(--p3-padding);
+#p3 > div, td, th {
+    overflow: auto;
 }
-#p3 button {
-    font-weight: bold;
+#p3 > th, td {
+    border: var(--borde-fino);
+    border-collapse: collapse;
+}
+@media (orientation: landscape) {
+    #div_header_resumen {
+        position: absolute;
+        top: var(--height-titulo);
+    }
+    #header_resumen {
+        text-shadow: var(--borde-letra-blanco);
+        width: 100%;
+        height: var(--height-cabecera);
+    }
+    #div_table_resumen {
+        position: absolute; max-height:calc(100vh - var(--height-titulo) - var(--height-cabecera)); top: calc(var(--height-titulo) + var(--height-cabecera));
+        scroll-snap-type: y mandatory;
+        width: 100%;
+    }
+    #table_resumen {
+        width: 100%;
+    }
+    tbody:nth-of-type(odd) {
+        background-color: var(--fondo-medio);
+    }
+    tbody:nth-of-type(even) {
+        background-color: var(--fondo-claro);
+    }
+}
+@media (orientation: portrait) {
+    #div_table_resumen {
+        position: absolute; max-height:calc(100vh - var(--height-titulo)); top: var(--height-titulo);
+        scroll-snap-type: y mandatory;
+        left: 0;
+        padding: 0;
+        margin: 0;
+    }
+    #div_table_resumen tr {
+        display: flex;
+        flex-direction: column;
+        scroll-snap-align: start;
+        left: 0;
+        padding-top: 5px;
+        margin: 0;
+    }
+    #div_table_resumen td {
+        align-self: flex-start;
+        background-color: var(--fondo-claro);
+        left: 0;
+        padding: 5px;
+        margin: 0;
+        width: 100%;
+    }
+    /* Una de las dos primeras columnas tiene que tener información */
+    #div_table_resumen td:first-child:not(:empty),
+    #div_table_resumen td:first-child:empty+td:not(:empty) {
+        background-color: var(--fondo-medio);
+    }
+    #div_table_resumen td:empty {
+        visibility: hidden;
+        padding: 0;
+        margin: 0;
+        border:none;
+    }
+    #div_header_resumen {
+        visibility: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    .pregunta:not(:empty)::before {
+        font-weight: bold;
+        content: "PREGUNTA: ";
+    }
+    .encabezado:not(:empty)::before {
+        font-weight: bold;
+        content: "ENCABEZADO: ";
+    }
+    .respuestaUsuario:not(:empty)::before {
+        font-weight: bold;
+        content: "RESPUESTA USUARIO: ";
+    }
+    .respuestaCorrecta:not(:empty)::before {
+        font-weight: bold;
+        content: "RESPUESTA CORRECTA: ";
+    }
 }

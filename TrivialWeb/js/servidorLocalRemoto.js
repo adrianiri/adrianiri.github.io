@@ -25,4 +25,4 @@ async function generarURL(url) {
         }
     }
 }
-generarURL(url);
+generarURL(url); // Esta función es la primera que se ejecuta

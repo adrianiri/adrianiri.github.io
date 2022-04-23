@@ -62,6 +62,9 @@ h2 {
 .letra-azul {
     color: blue;
 }
+.letra-roja {
+    color: red;
+}
 .oculto {
 	display: none !important;
 }
