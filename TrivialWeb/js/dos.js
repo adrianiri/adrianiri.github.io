@@ -60,10 +60,9 @@ function comenzarJuego() {
                 return;
             }
         }
-        clicaCuatro(); // Manda a la pantalla del juego
         inicializarNivel();
         extraerNivel();
-        //alert(JSON.stringify(colecNiveles));
+        clicaCuatro(); // Manda a la pantalla del juego
     } else {
         alert(errores);
         return;
@@ -150,7 +149,4 @@ function generarNivel() {
     nivel.setColecRespuestas(colecRespuestas);
     /////////////////////////////////////////////////////////////////////////
     return nivel;
-}
-function siguienteNivel() {
-    
 }
