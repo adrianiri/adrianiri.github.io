@@ -6,6 +6,7 @@
     --p2-form-header-height: 40px;
     --p2-form-hijo-width: 200px;
     --p2-form-header-fondo: green;
+    --p2-checkbox-width: 20px;
 }
 #p2 > .formulario {
     background-color: var(--fondo-medio);
@@ -50,4 +51,8 @@
 #p2 button {
     font-weight: bold;
     font-size: 12px;
+}
+#p2 label {
+    width: calc(100% - var(--p2-checkbox-width) - var(--p2-padding) * 2);
+    display:inline-block
 }

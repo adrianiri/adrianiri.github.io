@@ -8,6 +8,7 @@
     --p4-form-header-height: 40px;
     --p4-form-hijo-width: 400px;
     --p4-form-header-fondo: blue;
+    --p4-radio-width: 21px;
 }
 #p4 > .formulario {
     background-color: var(--fondo-medio);
@@ -52,4 +53,8 @@
 #p4 button {
     font-weight: bold;
     font-size: 12px;
+}
+#p4 label {
+    width: calc(100% - var(--p4-radio-width) - var(--p4-padding) * 2);
+    display:inline-block
 }
