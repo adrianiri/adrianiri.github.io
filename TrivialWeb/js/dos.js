@@ -18,13 +18,13 @@ function comenzarJuego() {
     if (txtNumPreguntas.value == "") {
         errores = "- Debe especificar un número de preguntas\n";
     }
-    if (meaning.checked) colecEncabezadosSeleccionados.push("meaning");
-    if (synonyms.checked) colecEncabezadosSeleccionados.push("synonyms");
-    if (antonyms.checked) colecEncabezadosSeleccionados.push("antonyms");
-    if (palabra.checked) {colecEncabezadosSeleccionados.push("palabra");}
-    if (expresion.checked) colecEncabezadosSeleccionados.push("expresion");
-    if (sinonimos.checked) colecEncabezadosSeleccionados.push("sinonimos");
-    if (antonimos.checked) colecEncabezadosSeleccionados.push("antonimos");
+    if (meaning.checked) colecEncabezadosSeleccionados.push("Meaning");
+    if (synonyms.checked) colecEncabezadosSeleccionados.push("Synonyms");
+    if (antonyms.checked) colecEncabezadosSeleccionados.push("Antonyms");
+    if (palabra.checked) {colecEncabezadosSeleccionados.push("Palabra");}
+    if (expresion.checked) colecEncabezadosSeleccionados.push("Expresión");
+    if (sinonimos.checked) colecEncabezadosSeleccionados.push("Sinónimos");
+    if (antonimos.checked) colecEncabezadosSeleccionados.push("Antónimos");
     if (colecEncabezadosSeleccionados.length == 0) {
         errores += "- Debe seleccionar al menos un tipo de pregunta\n";
     }
