@@ -5,11 +5,26 @@ function inicializarDos() {
 }
 function comenzarJuego() {
     var txtNumPreguntas = document.querySelector("#txtNumPreguntas");
+    colecEncabezadosSeleccionados = [];
+    var meaning = document.querySelector("#meaning");
+    var synonyms = document.querySelector("#synonyms");
+    var antonyms = document.querySelector("#antonyms");
+    var palabra = document.querySelector("#palabra");
+    var expresion = document.querySelector("#expresion");
+    var sinonimos = document.querySelector("#sinonimos");
+    var antonimos = document.querySelector("#antonimos");
     var errores = "";
     var nivel;
     if (txtNumPreguntas.value == "") {
         errores = "- Debe especificar un número de preguntas\n";
     }
+    if (meaning.checked) colecEncabezadosSeleccionados.push("meaning");
+    if (synonyms.checked) colecEncabezadosSeleccionados.push("synonyms");
+    if (antonyms.checked) colecEncabezadosSeleccionados.push("antonyms");
+    if (palabra.checked) {colecEncabezadosSeleccionados.push("palabra");}
+    if (expresion.checked) colecEncabezadosSeleccionados.push("expresion");
+    if (sinonimos.checked) colecEncabezadosSeleccionados.push("sinonimos");
+    if (antonimos.checked) colecEncabezadosSeleccionados.push("antonimos");
     if (colecEncabezadosSeleccionados.length == 0) {
         errores += "- Debe seleccionar al menos un tipo de pregunta\n";
     }

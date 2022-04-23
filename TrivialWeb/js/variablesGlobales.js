@@ -7,7 +7,7 @@ let respuestaCorrecta;
 let numCorrectas;
 let colecFilasPreguntables = [];
 let colecFilasPreguntablesCopia = [];
-let colecEncabezadosSeleccionados = ["Meaning","Synonyms","Antonyms","Palabra","Expresión","Sinónimos","Antónimos"]; // Está sin programar
+let colecEncabezadosSeleccionados;
 let colecNiveles = [];
 let colecResumenNiveles = [];
 let memSeleccionarTodo;
