@@ -9,28 +9,19 @@ function generacionPuntuacion() {
     encabezadoResumen.textContent = puntuacion;
 }
 function generacionCabeceraResumen() {
-    var p3 = document.querySelector("#p3 > div > section");
-    p3.innerHTML = `
-        <div id="div_header_resumen">
-            <table  id="header_resumen">
-                <tr>
-                    <th>PREGUNTA</th>
-                    <th>ENCABEZADO</th>
-                    <th>RESPUESTA USUARIO</th>
-                    <th>RESPUESTA CORRECTA</th>
-                </tr>
-            </table>
-        </div>
+    var header_resumen = document.querySelector("#header_resumen");
+    header_resumen.innerHTML = `
+        <tr>
+            <th>PREGUNTA</th>
+            <th>ENCABEZADO</th>
+            <th>RESPUESTA USUARIO</th>
+            <th>RESPUESTA CORRECTA</th>
+        </tr>
     `;
 }
 function generacionTablaResumen() {
-    var p3 = document.querySelector("#p3 > div > section")
-    p3.innerHTML += `
-        <div id="div_table_resumen">
-            <table id="table_resumen"></table>
-        </div>
-    `
-    var tabla = document.querySelector("#table_resumen");
+    var table_resumen = document.querySelector("#table_resumen");
+    table_resumen.innerHTML = "";
     var nuevaFila;
     for (var nivel in colecResumenNiveles) {
         nuevaFila = `
@@ -51,6 +42,6 @@ function generacionTablaResumen() {
                 </tr>
             `;
         }
-        tabla.innerHTML += nuevaFila;
+        table_resumen.innerHTML += nuevaFila;
     }
 }
