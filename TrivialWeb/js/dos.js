@@ -61,7 +61,9 @@ function comenzarJuego() {
             }
         }
         clicaCuatro(); // Manda a la pantalla del juego
-        alert(JSON.stringify(colecNiveles));
+        inicializarNivel();
+        extraerNivel();
+        //alert(JSON.stringify(colecNiveles));
     } else {
         alert(errores);
         return;
