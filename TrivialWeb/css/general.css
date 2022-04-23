@@ -7,7 +7,8 @@
     --letra-clara:rgb(255,255,255);
     --letra-media:rgb(200,200,200);
     --letra-oscura:rgb(0,0,0);
-    --borde-fino:1px solid rgb(0,0,0);
+    --borde-fino-grosor: 1px;
+    --borde-fino: var(--borde-fino-grosor) solid rgb(0,0,0);
     --borde-grueso:2px solid rgb(0,0,0);
     --borde-radio: 10px;
     --opacidad-total:1;
@@ -17,6 +18,8 @@
     --height-titulo: 50px;
     --height-cabecera: 30px;
     --transicion: 0s;
+    --padding-th-landscape: 5px;
+    --padding-td-landscape: 5px;
 }
 * {
     font-family: var(--letra);
@@ -79,4 +82,40 @@ h2 {
 }
 .centro {
     text-align: center;
+}
+@media (orientation: landscape) {
+    th {
+        background-color: var(--fondo-medio-oscuro);
+        color: var(--letra-oscura);
+        text-align: center;
+        font-weight: bold;
+        padding: var(--padding-th-landscape);
+    }
+    table {
+        border: var(--borde-fino);
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+    td {
+        text-align: left;
+        padding: var(--padding-td-landscape);
+    }
+    tr {
+        scroll-snap-align: start;
+    }
+    tbody:nth-of-type(odd) {
+        background-color: var(--fondo-medio);
+    }
+    tbody:nth-of-type(even) {
+        background-color: var(--fondo-claro);
+    }
+}
+@media (orientation: portrait) {
+    table {
+        display: table;
+        border-collapse: collapse;
+        box-sizing: border-box;
+        text-indent: initial;
+        border-spacing: 0;
+    }
 }

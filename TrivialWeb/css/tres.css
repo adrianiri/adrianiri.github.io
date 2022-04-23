@@ -9,7 +9,7 @@
 #p3 > .formulario {
     background-color: var(--fondo-medio);
     width: var(--p3-form-width);
-    height: calc(var(--p3-form-height) - 2px); /* 2px de borde */
+    height: calc(var(--p3-form-height) - 2 * var(--borde-fino-grosor)); /* 2px de borde */
     margin: var(--p3-margin) auto;
     padding: 0;
     border: var(--borde-fino);
@@ -24,16 +24,14 @@
 	margin: var(--p3-margin);
     padding: var(--p3-padding);
     font-weight: bold;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,var(--opacidad-media));
     border-radius: var(--borde-radio);
 }
 #p3 > .formulario > section {
     width: calc(var(--p3-form-width) - (2 * var(--p3-padding)));
-    height: calc(var(--p3-form-height) - 2px - var(--p3-form-header-height) - 2 * var(--p3-padding) - 1 * var(--p3-margin));
+    height: calc(var(--p3-form-height) - 2 * var(--borde-fino-grosor) - var(--p3-form-header-height) - 2 * var(--p3-padding) - 1 * var(--p3-margin));
 	margin: var(--p3-margin);
     padding: 0;
-    overflow: auto;
-    border-radius: var(--borde-radio);
+    overflow: visible;
     /* Para los hijos */
     display: flex;
     flex-wrap: wrap;
@@ -49,18 +47,19 @@
 }
 @media (orientation: landscape) {
     #div_header_resumen {
-        position: absolute;
-        top: var(--height-titulo);
+        position: relative;
+        table-layout: fixed;
     }
     #header_resumen {
-        text-shadow: var(--borde-letra-blanco);
         width: 100%;
-        height: var(--height-cabecera);
+        height: 100%;
     }
     #div_table_resumen {
-        position: absolute; max-height:calc(100vh - var(--height-titulo) - var(--height-cabecera)); top: calc(var(--height-titulo) + var(--height-cabecera));
+        position: relative; max-height:calc(100vh - var(--height-titulo) - var(--height-cabecera));
         scroll-snap-type: y mandatory;
+        height: calc(var(--p3-form-height) - 2 * var(--borde-fino-grosor) - var(--p3-form-header-height) - var(--height-cabecera) - 2 * var(--p3-padding) - 1 * var(--p3-margin));
         width: 100%;
+        table-layout: fixed;
     }
     #table_resumen {
         width: 100%;
@@ -73,12 +72,20 @@
     }
 }
 @media (orientation: portrait) {
+    #div_header_resumen {
+        display: none;
+    }
     #div_table_resumen {
-        position: absolute; max-height:calc(100vh - var(--height-titulo)); top: var(--height-titulo);
+        position: relative; max-height:calc(100vh - var(--height-titulo));
         scroll-snap-type: y mandatory;
         left: 0;
         padding: 0;
         margin: 0;
+        height: calc(var(--p3-form-height) - 2 * var(--borde-fino-grosor) - var(--p3-form-header-height) - 2 * var(--p3-padding) - 1 * var(--p3-margin));
+        width: 100%;
+    }
+    #table_resumen {
+        width: 100%;
     }
     #div_table_resumen tr {
         display: flex;
@@ -86,7 +93,6 @@
         scroll-snap-align: start;
         left: 0;
         padding-top: 5px;
-        margin: 0;
     }
     #div_table_resumen td {
         align-self: flex-start;
@@ -94,7 +100,7 @@
         left: 0;
         padding: 5px;
         margin: 0;
-        width: 100%;
+        width: calc(100% - 2 * var(--borde-fino-grosor) - 2 * var(--padding-td-landscape));
     }
     /* Una de las dos primeras columnas tiene que tener información */
     #div_table_resumen td:first-child:not(:empty),
@@ -111,6 +117,7 @@
         visibility: hidden;
         padding: 0;
         margin: 0;
+        table-layout: fixed;
     }
     .pregunta:not(:empty)::before {
         font-weight: bold;

@@ -1,8 +1,18 @@
+function generacionPuntuacion() {
+    var aciertos = 0;
+    var puntuacion = "";
+    var encabezadoResumen = document.querySelector("#p3 > div > header");
+    for (var nivel in colecResumenNiveles) {
+        if (colecResumenNiveles[nivel].getRespuestaUsuario() == colecResumenNiveles[nivel].getRespuestaCorrecta()) aciertos += 1;
+    }
+    puntuacion = `RESUMEN (${aciertos}/${numPreguntas}: ${(100*aciertos/numPreguntas).toFixed(2)}%)`
+    encabezadoResumen.textContent = puntuacion;
+}
 function generacionCabeceraResumen() {
     var p3 = document.querySelector("#p3 > div > section");
     p3.innerHTML += `
-        <div id="div_header_resumen" class="anchisimo">
-            <table  id="header_resumen" style="table-layout:auto">
+        <div id="div_header_resumen">
+            <table  id="header_resumen">
                 <tr>
                     <th>PREGUNTA</th>
                     <th>ENCABEZADO</th>
@@ -16,7 +26,7 @@ function generacionCabeceraResumen() {
 function generacionTablaResumen() {
     var p3 = document.querySelector("#p3 > div > section")
     p3.innerHTML += `
-        <div id="div_table_resumen" class="anchisimo">
+        <div id="div_table_resumen">
             <table id="table_resumen"></table>
         </div>
     `

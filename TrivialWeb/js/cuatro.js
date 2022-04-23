@@ -3,7 +3,11 @@ function inicializarJuego() {
 }
 function extraerNivel() {
     var colecRespuestas = [];
-    numPregunta.innerHTML = `Pregunta ${numPregunta} de ${numPreguntas}:<br><br>`;
+    var encabezadoPreguntas = document.querySelector("#p4 > div > header");
+    var pregunta = document.querySelector("#pregunta");
+    var encabezado = document.querySelector("#encabezado");
+    var div_respuestas = document.querySelector("#div_respuestas");
+    encabezadoPreguntas.textContent = `PREGUNTAS (${numPregunta}/${numPreguntas})`;
     ///////////////////////// pregunta.textContent /////////////////////////
     pregunta.innerHTML = `<span style="font-weight:bold;">${colecNiveles[0].getPregunta()}</span>`;
     /////////////////////////////////////////////////////////////////////////
@@ -13,7 +17,7 @@ function extraerNivel() {
     ///////////////////////// respuestas.textContent ////////////////////////
     colecRespuestas = colecNiveles[0].getColecRespuestas();
     div_respuestas.innerHTML = `<label>
-                                    <input type="radio" name="respuestas" id="respuesta0" value="${colecRespuestas[0]}">
+                                    <input type="radio" name="respuestas" id="respuesta0" value="${colecRespuestas[0]}" checked>
                                     <label for="respuesta0"> ${colecRespuestas[0]}</label>
                                 </label>
                                 <br><br>
@@ -57,13 +61,14 @@ function siguienteNivel() {
         }
         mandarNivelAResumen(respuestaUsuario);
     }
-    alert (mensaje);
+    // alert (mensaje);
     if (numPregunta < numPreguntas) {
         numPregunta += 1;
         extraerNivel();
         clicaCuatro();
     } else {
         clicaTres(); // Manda a la pantalla resumen
+        generacionPuntuacion();
         generacionCabeceraResumen();
         generacionTablaResumen();
     }

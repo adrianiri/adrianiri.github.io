@@ -28,7 +28,6 @@
 	margin: var(--p4-margin);
     padding: var(--p4-padding);
     font-weight: bold;
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,var(--opacidad-media));
     border-radius: var(--borde-radio);
 }
 #p4 > .formulario > section {
