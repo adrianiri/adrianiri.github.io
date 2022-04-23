@@ -151,3 +151,6 @@ function generarNivel() {
     /////////////////////////////////////////////////////////////////////////
     return nivel;
 }
+function siguienteNivel() {
+    
+}
