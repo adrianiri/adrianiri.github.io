@@ -71,6 +71,7 @@ function siguienteNivel() {
         generacionCabeceraResumen();
         generacionTablaResumen();
         habilitaTres();
+        deshabilitaCuatro();
         clicaTres(); // Manda a la pantalla resumen
     }
 }
