@@ -62,6 +62,7 @@ function comenzarJuego() {
         }
         inicializarJuego();
         extraerNivel();
+        habilitaCuatro();
         clicaCuatro(); // Manda a la pantalla del juego
     } else {
         alert(errores);

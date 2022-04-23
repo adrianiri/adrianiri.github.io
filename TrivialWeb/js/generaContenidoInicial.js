@@ -73,8 +73,6 @@ function generaTabla() {
             tabla.classList.remove("oculto");
             habilitaUno();
             habilitaDos();
-            habilitaTres();
-            habilitaCuatro();
             clicaUno();
             clearInterval(crono);
         }

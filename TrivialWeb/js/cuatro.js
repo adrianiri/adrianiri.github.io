@@ -67,10 +67,11 @@ function siguienteNivel() {
         extraerNivel();
         clicaCuatro();
     } else {
-        clicaTres(); // Manda a la pantalla resumen
         generacionPuntuacion();
         generacionCabeceraResumen();
         generacionTablaResumen();
+        habilitaTres();
+        clicaTres(); // Manda a la pantalla resumen
     }
 }
 function mandarNivelAResumen(respuestaUsuario) {
