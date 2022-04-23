@@ -63,6 +63,7 @@ function comenzarJuego() {
         inicializarJuego();
         extraerNivel();
         habilitaCuatro();
+        deshabilitaTres();
         clicaCuatro(); // Manda a la pantalla del juego
     } else {
         alert(errores);
