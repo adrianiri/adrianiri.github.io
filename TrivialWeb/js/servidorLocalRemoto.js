@@ -6,7 +6,7 @@ async function generarURL(url) {
     try { // LOCAL
         const res = await fetch(url);
         const text = await res.text();
-        if (text == "1") {
+        if (text == "1") { // Esto debería dar error si no puede leer la URL del servidor local
             esServidorLocal = true;
             url = "http://127.0.0.1:8000/leerTraducciones.php";
             generaContenidoInicial(url);
@@ -19,7 +19,7 @@ async function generarURL(url) {
         generaContenidoInicial(url);
     } finally { // SIEMPRE (LO PONGO PARA RECORDAR EL FINALLY, BÁSICAMENTE)
         if (esServidorLocal) {
-            console.log(`SERVIDOR LOCAL + esServidorLocal = ${esServidorLocal}`);
+            console.log("SERVIDOR LOCAL");
         } else {
             console.log("SERVIDOR REMOTO");
         }
