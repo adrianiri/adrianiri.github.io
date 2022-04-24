@@ -19,7 +19,7 @@ async function generarURL(url) {
         generaContenidoInicial(url);
     } finally { // SIEMPRE (LO PONGO PARA RECORDAR EL FINALLY, BÁSICAMENTE)
         if (esServidorLocal) {
-            console.log("SERVIDOR LOCAL");
+            console.log(`SERVIDOR LOCAL + esServidorLocal = ${esServidorLocal}`);
         } else {
             console.log("SERVIDOR REMOTO");
         }
