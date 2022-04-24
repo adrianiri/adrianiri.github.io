@@ -2,7 +2,7 @@
 var url = "http://127.0.0.1:8000/remoto0_Local1.php";
 // INTENTO ACCEDER AL SERVIDOR LOCAL, SI NO PUEDO ES QUE ESTOY EN LA WEB (O QUE EL SERVIDOR NO ESTÁ ARRANCADO)
 async function generarURL(url) {
-    var esServidorLocal;
+    var esServidorLocal = false;
     try { // LOCAL
         const res = await fetch(url);
         const text = await res.text();

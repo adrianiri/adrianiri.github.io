@@ -60,11 +60,14 @@ function comenzarJuego() {
                 return;
             }
         }
+        // Preparo la pantalla del juego
         inicializarJuego();
         extraerNivel();
         habilitaCuatro();
+        // Ya no se puede volver a la pantalla resumen porque haría referencia a otra partida
         deshabilitaTres();
-        clicaCuatro(); // Manda a la pantalla del juego
+        // Manda a la pantalla del juego
+        clicaCuatro();
     } else {
         alert(errores);
         return;
